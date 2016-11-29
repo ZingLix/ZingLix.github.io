@@ -19,7 +19,7 @@ tags:
 但你还真别说，搭这个博客还蛮方便的，这里得感谢下：
 
 * [搭建独立博客教程](http://www.cnfeat.com/blog/2014/05/10/how-to-build-a-blog/)
-* [一个出色的模板](http://huangxuan.me/)
+* [一个出色的模板](http://huangxuan.me/)（讲道理这里还有好多前作者影子。。。）
 
 就这样，一个独立的博客就这么诞生了。
 
