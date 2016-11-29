@@ -4,8 +4,10 @@
 {% include head.html %}
 
 <!-- hack iOS CSS :active style -->
-<body ontouchstart="">
+<body ontouchstart="">  
+	{% include nav.html %}
 
+    {{ content }
    
     <!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url=/{{ page.url }}></div>
@@ -23,8 +25,7 @@ var duoshuoQuery = {short_name:"zinglix"};
 	})();
 	</script>
 <!-- 多说公共JS代码 end -->
-        {% include nav.html %}
-    {{ content }}
+    
     {% include footer.html %}
 <!-- Image to hack wechat -->
 <img src="/img/icon_wechat.png" width="0" height="0" />
