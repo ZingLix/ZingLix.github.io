@@ -8,7 +8,7 @@
 	{% include nav.html %}
 
     {{ content }
-   
+       {% include footer.html %}
     <!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url=/{{ page.url }}></div>
 <!-- 多说评论框 end -->
@@ -26,7 +26,6 @@ var duoshuoQuery = {short_name:"zinglix"};
 	</script>
 <!-- 多说公共JS代码 end -->
     
-    {% include footer.html %}
 <!-- Image to hack wechat -->
 <img src="/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
