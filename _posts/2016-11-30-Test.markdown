@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Hello Blog"
+title:      "Test"
 subtitle:   "Yeah, I have my own blog."
-date:       2016-11-29 16:00:00
+date:       2016-11-30 16:00:00
 author:     "ZingLix"
 header-img: "img/post-1.jpg"
 catalog: true
