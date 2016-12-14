@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<!-- Free Sitemap Generator http://www.sitemapx.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://zinglix.xyz/</loc>
+<priority>1.0</priority>
+<lastmod>2016-12-14T08:01:52+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
+<loc>http://zinglix.xyz/about/</loc>
+<priority>0.6</priority>
+<lastmod>2016-12-14T08:01:52+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
+<loc>http://zinglix.xyz/tags/</loc>
+<priority>0.6</priority>
+<lastmod>2016-12-14T08:01:52+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
+<loc>http://zinglix.xyz/2016/11/30/hello-blog/</loc>
+<priority>0.1</priority>
+<lastmod>2016-12-14T08:01:53+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
+<loc>http://zinglix.xyz/2016/11/30/study-notes-list/</loc>
+<priority>0.1</priority>
+<lastmod>2016-12-14T08:01:53+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+</urlset>
