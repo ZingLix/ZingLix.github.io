@@ -32,6 +32,7 @@ int IsEmpty(List L);
 int IsLast(Position P);
 Position Find(int X, List L);
 Position FindPrevious(int X, List L);
+void Insert(int data,Position P);
 void Delete(int X, List L);
 void DeleteList(List L);
 ```
@@ -89,6 +90,20 @@ Position FindPrevious(int X, List L)
 }
 ```
 传入参数x为要寻找的值，L为链表头节点，返回前驱元指针。
+
+## 插入
+![583e9528cb615.jpg](https://ooo.0o0.ooo/2016/12/15/5852aee707624.jpg)
+```
+void Insert(int data, Position P) {
+	List tmp = (List)malloc(sizeof(Node));
+	tmp->x = data;
+	tmp->Next = P->Next;
+	P->Next = tmp;
+}
+```
+
+功能是在P位置后插入一个值为data的结点。
+操作即为创建一个新节点，将前一个结点指向新节点，新节点指向前一个结点原来指向的位置。
 
 ## 删除节点
 ```
