@@ -80,8 +80,8 @@ Position Find(int X, List L)
 
 ## 寻找前驱元
 ```
-Position FindPrevious(int X, List L)
-{
+Position FindPrevious(int X, List L){
+
 	Position P = L;
 	while (P->Next->x != X&&P != NULL) {
 		P = P->Next;
@@ -93,8 +93,10 @@ Position FindPrevious(int X, List L)
 
 ## 插入
 ![583e9528cb615.jpg](https://ooo.0o0.ooo/2016/12/15/5852aee707624.jpg)
+
 ```
 void Insert(int data, Position P) {
+
 	List tmp = (List)malloc(sizeof(Node));
 	tmp->x = data;
 	tmp->Next = P->Next;
