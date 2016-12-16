@@ -66,8 +66,7 @@ int IsLast(Position P)
 
 ## 寻找
 ```
-Position Find(int X, List L)
-{
+Position Find(int X, List L){
 	Position P = L->Next;
 	while (P != NULL&&P->x != X) {
 		P = P->Next;
@@ -81,7 +80,6 @@ Position Find(int X, List L)
 ## 寻找前驱元
 ```
 Position FindPrevious(int X, List L){
-
 	Position P = L;
 	while (P->Next->x != X&&P != NULL) {
 		P = P->Next;
@@ -96,7 +94,6 @@ Position FindPrevious(int X, List L){
 
 ```
 void Insert(int data, Position P) {
-
 	List tmp = (List)malloc(sizeof(Node));
 	tmp->x = data;
 	tmp->Next = P->Next;
