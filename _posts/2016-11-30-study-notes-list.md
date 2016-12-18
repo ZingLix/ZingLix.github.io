@@ -1,7 +1,8 @@
 ---
-layout: post
-title: "学习笔记：数据结构-链表"
-date: 2016-11-30 16:28:26 +08:00
+layout:     post
+title:      "学习笔记：数据结构-链表"
+subtitle:   ""
+date:       2016-11-30
 author:     "ZingLix"
 header-img: "img/post-2.jpg"
 catalog: true
