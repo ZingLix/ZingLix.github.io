@@ -89,3 +89,8 @@ service-worker: true
 
 
 # Friends
+
+#collections
+collections:
+  hdu:
+    output: true
