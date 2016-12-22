@@ -94,3 +94,5 @@ service-worker: true
 collections:
   hdu:
     output: true
+  lanqiao:
+    output: true

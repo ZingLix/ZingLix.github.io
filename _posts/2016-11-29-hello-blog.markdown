@@ -43,13 +43,14 @@ tags:
 
 It's time to go on.
 
-```
-    #include <stdio.h>
+{% highlight c++ %}
+#include <stdio.h>
 
-    int main(){
+
+int main(){
     printf("Hello blog.");
     return 0;
-    }
-```
+}
+{% endhighlight %}
 
 
