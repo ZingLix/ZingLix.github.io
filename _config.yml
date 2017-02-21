@@ -96,3 +96,7 @@ collections:
     output: true
   lanqiao:
     output: true
+  UVa:
+    output: true
+
+port: 4001
