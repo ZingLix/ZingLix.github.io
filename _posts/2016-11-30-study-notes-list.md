@@ -135,4 +135,5 @@ void DeleteList(List L){
 从头节点开始一个个向后释放内存。
 
 
-[源代码戳此](https://github.com/ZingLix/Data-Structures-and-Algorithm/tree/master/List)
+
+> 源代码均以上传至[GitHub](https://github.com/ZingLix/Data-Structures-and-Algorithm/tree/master/List)
