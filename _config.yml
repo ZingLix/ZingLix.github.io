@@ -48,9 +48,6 @@ kramdown:
 
 
 
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
-
 # Gitment settings
 Client_ID: e142464e8cd0a33bb821
 Client_Secret: ca41bf15c586cbba02128f2ef1b9840af3d9ea67
