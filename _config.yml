@@ -51,12 +51,9 @@ kramdown:
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
 
-# Duoshuo settings
-duoshuo_username: zinglix
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
-
-
+# Gitment settings
+Client_ID: e142464e8cd0a33bb821
+Client_Secret: ca41bf15c586cbba02128f2ef1b9840af3d9ea67
 
 
 # Analytics settings
