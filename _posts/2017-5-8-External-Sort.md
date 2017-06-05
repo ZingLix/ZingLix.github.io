@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "学习笔记：算法-线性时间排序"
+title:      "算法-线性时间排序"
 subtitle:   ""
 date:       2017-5-8
 author:     "ZingLix"

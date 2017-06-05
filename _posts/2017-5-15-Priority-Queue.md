@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "学习笔记：优先队列"
+title:      "数据结构 - 优先队列"
 subtitle:   ""
 date:       2017-5-15
 author:     "ZingLix"
