@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "数据结构-链表"
+title:      "数据结构 - 链表"
 subtitle:   ""
 date:       2016-11-30
 author:     "ZingLix"
