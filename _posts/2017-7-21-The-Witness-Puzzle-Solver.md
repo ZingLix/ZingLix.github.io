@@ -10,6 +10,8 @@ tags:
     - 项目
 ---
 
+> [Github and English Version Here](https://github.com/ZingLix/TheWitnessSolver)
+
 ## 介绍
 
 The Witness（中文译名：见证者）是一款解密类的游戏，谜题主要形式是一笔画，如下图所示。
