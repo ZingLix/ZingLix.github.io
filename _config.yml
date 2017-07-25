@@ -86,12 +86,6 @@ service-worker: true
 
 #collections
 collections:
-  hdu:
-    output: true
-  lanqiao:
-    output: true
-  UVa:
-    output: true
   port:
 
 port: 4001
