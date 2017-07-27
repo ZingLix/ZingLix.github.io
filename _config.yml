@@ -65,7 +65,7 @@ ga_domain: zinglix.xyz
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Just a student majors in computer science. Get better."
+sidebar-about-description: "Just a student majors in computer science. Always be better."
 sidebar-avatar: /img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

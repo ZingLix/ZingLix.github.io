@@ -20,15 +20,17 @@ header-img: "img/about-bg.jpg"
 
     <p>Hey，我是<strong>ZingLix</strong>(别问我这名字什么意思我也不知道我怎么想出来的)，计算机专业学生，爱编程，爱技术，爱黑科技：D</p>
 
-    <p>不小心入了ACM的坑，正被算法折磨的死去活来中...</p>
+    <p>ACM的坑已弃，毕竟CS还有那么多东西等着我去研究，但是算法这坑还是逃不过...</p>
 
-    <p>完全无聊建了这个站，权当个人作品集，看看四年里我究竟能干些什么~</p>
+    <p>完全出于兴趣建了这个站，权当个人作品集，看看四年里我究竟能干些什么~</p>
     
-    <p>这里出现的大概会有：各种算法、各种自己乱搞的项目、各种研究的好玩的东西</p>
+    <p>这里出现的大概会有：各种学习笔记、各种自己乱搞的项目、各种研究的好玩的东西</p>
 
-    <p>Get better.</p>
+    <p>我也不知道之后还会学到些什么，反正学了再说：D</p>
 
-    <p>联系邮箱：zinglix.liu@gmail.com</p>
+    <p>Always be better.</p>
+
+    <p>Contact Email：zinglix.liu@gmail.com</p>
     
 </div>
 
@@ -79,52 +81,4 @@ header-img: "img/about-bg.jpg"
 
 
 
-{% if site.duoshuo_username %}
-<!-- 多说评论框 start -->
-
-<!-- 多说评论框 end -->
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User hacking by Hux
-    var _user = '{{site.duoshuo_username}}';
-
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
-    </div>
-</div>
-<!-- disqus 评论框 end -->
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
 {% endif %}
