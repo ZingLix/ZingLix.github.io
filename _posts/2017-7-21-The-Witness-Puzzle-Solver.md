@@ -16,7 +16,7 @@ tags:
 
 The Witness（中文译名：见证者）是一款解密类的游戏，谜题主要形式是一笔画，如下图所示。
 
-![1.jpg](\img\in-post\WitnessSolver\1.jpg)
+![1.jpg](/img/in-post\WitnessSolver\1.jpg)
 
 一笔画中有许多不同的形状，代表不同的规则。这个程序被设计用来解答这一谜题。
 
