@@ -20,9 +20,6 @@ github_username:     ZingLix
 #facebook_username:  huxpro
 # linkedin_username:  firstname-lastname-idxxxx
 
-
-
-# Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
@@ -54,9 +51,6 @@ Client_Secret: ca41bf15c586cbba02128f2ef1b9840af3d9ea67
 
 
 # Analytics settings
-# Baidu Analytics 
-ba_track_id: 56db96a233c8fecf5264edbd450e131a
-
 # Google Analytics
 ga_track_id: 'UA-88177731-1'            # Format: UA-xxxxxx-xx
 ga_domain: zinglix.xyz
