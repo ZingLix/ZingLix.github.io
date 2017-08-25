@@ -2,13 +2,17 @@
   layout: "post"
   title: "Latex 数学符号 汇总"
   date: "2017-08-23"
-  subtitle:   ""
+  subtitle:   "Latex Math Symbol Cheat Sheet"
   author:     "ZingLix"
   header-img: "img/post-9.jpg"
   catalog: true
   tags:
       - Latex
 ---
+
+Latex 的一大优点就是其可以写出优美的数学公式，本博客也使用 MathJax 来使用 Latex 中数学公式的效果。但是由于其有自己的语法，所以写了这篇文章以整理数学公式相关的内容。
+
+由于本文中公式较多，所以可能需要些许渲染的时间。
 
 ## 常见公式
 
@@ -22,6 +26,11 @@
 |求和|`\sum_{k=1}^N k^2`|$$\sum\limits_{k=1}^N k^2$$|
 |求积|`\prod_{i=1}^N x_i`|$$\prod\limits_{i=1}^N x_i$$|
 |极限|`\lim_{n \to \infty}n`|$$\lim\limits_{n \to \infty}n$$|
+|根号|`\sqrt[n]{x}|`|$$\sqrt[n]{x}$$|
+|上括号|`\overbrace{a+b+\cdots+z}^26`|$$\overbrace{a+b+\cdots+z}^{26}$$|
+|下括号|`\underbrace{a+b+\cdots+z}_26`|$$\underbrace{a+b+\cdots+z}_{26}$$|
+|向量|`\overrightarrow{AB}`|$$\overrightarrow{AB}$$
+
 
 ## 分数
 
@@ -336,3 +345,5 @@ $$
 |`\diamondsuit`|$$\diamondsuit$$|`\Re`|$$\Re$$|`\|`|$$\|$$|
 |`\backslash`|$$\backslash$$|`\heartsuit`|$$\heartsuit$$|`\Im`|$$\Im$$|
 |`\spadesuit`|$$\spadesuit$$|`\mho`|$$\mho$$
+
+> 主要根据  [维基百科](https://zh.wikipedia.org/zh-hans/Help:%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F) 制作
