@@ -1516,9 +1516,13 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 5px;
+  margin: 0;
+margin-top: 0px;
+margin-right: 5px;
+margin-bottom: 0px;
+margin-left: 5px;
 }
 kbd {
   padding: 2px 4px;
