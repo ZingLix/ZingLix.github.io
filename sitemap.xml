@@ -8,87 +8,107 @@
 
 <url>
   <loc>https://zinglix.xyz/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/about/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/portfolio/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/tags/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/08/31/jekyll-environment-setup/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/08/23/latex-maths-cheatsheet/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/08/20/hash-table/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/08/12/managed-unmanagedcode.markdown/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/27/BFS&amp;DFS/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/26/Graph/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/21/The-Witness-Puzzle-Solver/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/21/MD-Syntax/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/05/15/Priority-Queue/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/05/15/Heap/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/05/08/External-Sort/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/04/23/gitment/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/03/26/Stack/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/03/03/Sort/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2016/11/29/hello-blog/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/03/26/Stack/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/01/23/Tree/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>https://zinglix.xyz/2016/11/30/study-notes-list/</loc>
-  <lastmod>2017-07-27T06:50:55+00:00</lastmod>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/05/08/External-Sort/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/03/03/Sort/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/04/23/gitment/</loc>
+  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 </urlset>
