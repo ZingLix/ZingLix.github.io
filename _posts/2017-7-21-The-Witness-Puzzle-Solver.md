@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "The Witness 谜题求解器"
-subtitle:   ""
+subtitle:   "The Witness Solver"
 date:       2017-7-21
 author:     "ZingLix"
 header-img: "img/post-tw.jpg"

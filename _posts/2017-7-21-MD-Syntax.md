@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Markdown 语法小结"
-subtitle:   ""
+subtitle:   "Markdown Cheat SHeet"
 date:       2017-7-21
 author:     "ZingLix"
 header-img: "img/post-md.jpg"

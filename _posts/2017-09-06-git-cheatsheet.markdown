@@ -149,7 +149,7 @@ git remote add <name> <url>
 ```
 git remote add <name> <url1>
 git remote set-url --add <add> <url2>
-git push <name> --<name>
+git push <name> --all
 ```
 
 ### 拉取

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "数据结构 - 优先队列"
-subtitle:   ""
+subtitle:   "Data Structures - Priority Queue"
 date:       2017-5-15
 author:     "ZingLix"
 header-img: "img/post-7.png"

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "数据结构 - 链表"
-subtitle:   ""
+subtitle:   "Data Structures - List"
 date:       2016-11-30
 author:     "ZingLix"
 header-img: "img/post-2.jpg"
