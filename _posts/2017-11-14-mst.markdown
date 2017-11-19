@@ -1,0 +1,84 @@
+---
+layout: "post"
+title: "最小生成树算法"
+date: "2017-09-06"
+subtitle:   "Kruskal & Prim's Algorithm"
+author:     "ZingLix"
+header-img: "img/post-md.jpg"
+catalog: true
+tags:
+    - 图
+---
+
+## 基本概念
+
+在一张图 $$G=(V,E)$$ 中，能够连接 $$G$$ 中所有结点的树，称之为生成树，又因为每条边都具有权重，所以称所有生成树中权重之和最小的为 **最小生成树**（Minimum Spanning Tree）。
+
+在本文中讨论的两种算法均采用贪心政策，如果将最小生成树中的边当成一个集合，那么在每一步中两个算法都会挑选一条边加入这个集合中，这样的边称之为 **安全边** 。
+
+## Kruskal 算法
+
+Kruskal 算法中先用一个不相交集将每一个结点都当作一棵树的结点，而寻找安全边的策略则是每次都挑选一个权重最小的边，每一次加入就可以将两棵树合并，直至所有结点都被加入，此时生成的树即为最小生成树。
+
+![](/img/in-post/MST/Kruskal.gif)
+
+然而当加入了一定多的边后，就需要决定是否将这条边加入集合中，判断的策略是边的两个结点是否属于同一颗树，因为如果已经属于同一棵树说明他们已经连通，不再需要新的边，而如果不属于同一棵树，那么这条边是能够将两棵树合并的权重最小的边，具体证明在此不赘述。
+
+如下为 Kruskal 算法的示例代码。
+
+``` c++
+void Graph::MST_Kruskal()
+{
+  DisjointSet<Vertex*> Set(G);     //将所有结点放入不相交集中并互相独立
+	priority_queue<Edge*> H;      //用一个优先队列来保证边的权重从小到大
+
+	for (int i = 0; i < v; i++) {
+		for (int j = 0; j < i; j++) {
+			if (graph[i][j] != 0) H.push(&graph[i][j]);
+		}
+	}
+	Edge E;
+	while (!H.empty()) {
+		E = *H.top();
+		if (Set.Find(E.v1) != Set.Find(E.v2)) {   //判断两个结点是否处于同一颗树中
+			Set.Union(E.v1, E.v2);
+		}
+		H.pop();
+	}
+}
+```
+
+## Prim 算法
+
+Prim 算法可以从任意一个结点开始，然后逐步长大直至所有的结点都被纳入集合 A 中。每一次挑选安全边的策略是总是挑选集合 A 中结点向外延伸的边中权重最小的那条。
+
+![](/img/in-post/MST/Prim.gif)
+
+有时会遇到最小的边两侧的结点已经被加入集合中，此时应将这条边舍去，因为最小生成树不能够成环。
+
+实际实现中用一个优先队列来更快速的得到一条新的边，每个结点都赋予一个 key 和 parent 属性来保存与当前结点中连接最小的权重和前一个结点。
+
+如下代码展示了主要的操作，省略了部分细节。
+
+``` c++
+void Graph::MST_Prim(Vertex V) {
+	for (int i = 0; i < v; i++) {  //将所有结点初始化
+		Ver[i].key = INF;
+		Ver[i].parent = nullptr;
+	}
+	V.key = 0;
+	std::priority_queue<Vertex> Q(G);  //以key为属性维护优先队列
+	Vertex u;
+	while (!Q.empty()) {
+		u = Q.top();
+		for (int i = 0; i < v; i++) {   //遍历所有与 u 相连结点
+			Vertex tmp = Ver[i];
+			if (edge[u][tmp] != 0 && edge[u][tmp] < tmp.key) {  //如果存在边，且边权重小
+				Ver[i].parent = u;
+				Ver[i].key = edge[u][tmp];
+			}
+		}
+		Q.pop();
+	}
+}
+```
