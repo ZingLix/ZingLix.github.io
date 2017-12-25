@@ -26,7 +26,7 @@ Kruskal 算法中先用一个不相交集将每一个结点都当作一棵树的
 
 如下为 Kruskal 算法的示例代码。
 
-``` c++
+``` java
 void Graph::MST_Kruskal()
 {
   DisjointSet<Vertex*> Set(G);     //将所有结点放入不相交集中并互相独立
@@ -60,7 +60,7 @@ Prim 算法可以从任意一个结点开始，然后逐步长大直至所有的
 
 如下代码展示了主要的操作，省略了部分细节。
 
-``` c++
+``` java
 void Graph::MST_Prim(Vertex V) {
 	for (int i = 0; i < v; i++) {  //将所有结点初始化
 		Ver[i].key = INF;
@@ -73,7 +73,7 @@ void Graph::MST_Prim(Vertex V) {
 		u = Q.top();
 		for (int i = 0; i < v; i++) {   //遍历所有与 u 相连结点
 			Vertex tmp = Ver[i];
-			if (edge[u][tmp] != 0 && edge[u][tmp] < tmp.key) {  //如果存在边，且边权重小
+			if (edge[u][tmp] != 0 && edge[u][tmp] < tmp.key) {  //如果存在边且权重小
 				Ver[i].parent = u;
 				Ver[i].key = edge[u][tmp];
 			}

@@ -20,7 +20,7 @@ tags:
 ![CountingSort.gif](/img/in-post/ExternalSort/CountingSort.gif)
 
 这里arr是我们需要排序的数组，max记录了最大的数据，tmp用来不同数据的数量，ans为存放输出的数组。
-``` cpp
+``` java
 void counting_sort(vector<int>& arr, const int max) {
 	int *tmp = new int[max];
 	for (int i = 0; i < max; i++) tmp[i] = 0;  //初始化tmp
@@ -45,7 +45,7 @@ void counting_sort(vector<int>& arr, const int max) {
 ![RadixSort.gif](/img/in-post/ExternalSort/RadixSort.gif)
 其中arr为要排序的数组，d为最高位。
 
-``` cpp
+``` java
 void radix_sort(vector<int>& arr,int d)
 {
 	for (int i = 1; i <= d; i++) Rsort(arr, i);  //依次对每一位排序
@@ -78,7 +78,7 @@ void Rsort(vector<int> &arr, int i) {
 
 arr为要排序的数组，vec用来记录桶中元素。
 
-``` cpp
+``` java
 void bucket_sort(vector<int>& arr) {
 	vector<vector<int>> vec;
 	for (int i = 0; i < 10; i++) {
