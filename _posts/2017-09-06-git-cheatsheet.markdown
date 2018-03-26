@@ -125,6 +125,7 @@ git commit --amend
 |合并至当前分支|`git merge <branch>`|
 |删除分支   | `git branch -d <branch>`  |
 |强制删除   | `git branch -D <branch>`  |
+|删除远程仓库分支| `git push origin --delete <branch>`|
 
 ### 冲突解决
 
@@ -190,7 +191,7 @@ git push <remote> <branch>
 |删除标签   | `git tag -d <tag>`  |
 |推送标签   | `git push origin <tag>`  |
 |推送所有标签   | `git push origin --tags`  |
-|删除远程标签   | `git tag -d <tag>`<br>`git push origin :refs/tags/<tag>`  |
+|删除远程标签   | `git push origin --delete tag <tag>`  |
 
 ## 暂存工作目录
 
