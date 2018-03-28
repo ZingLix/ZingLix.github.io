@@ -144,7 +144,7 @@ body {
   overflow-x: hidden;
 }
 p {
-  margin: 30px 0;
+  margin: 30px 0 0 10px;
 }
 h1,
 h2,
@@ -223,6 +223,7 @@ hr.small {
 pre,
 .table-responsive {
   -webkit-overflow-scrolling: touch;
+  margin: 30px 0 0 10px;
 }
 pre code {
   display: block;
@@ -634,6 +635,7 @@ pre code {
   font-size: 16px;
   font-style: italic;
   margin-top: 0;
+  margin-left: 0;
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
@@ -1091,4 +1093,10 @@ img::-moz-selection {
 }
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
+}
+.highlighter-rouge {
+  margin: 30px 0 0 10px;
+}
+p.sidebar_description{
+  margin: 30px 0 0 0;
 }
