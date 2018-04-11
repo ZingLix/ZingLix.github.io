@@ -6,109 +6,127 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://zinglix.xyz/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:44+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/about/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:44+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/portfolio/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:44+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/tags/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/12/31/sum2017/</loc>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/09/06/mst/</loc>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/09/06/git-cheatsheet/</loc>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/08/31/jekyll-environment-setup/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/08/23/latex-maths-cheatsheet/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/08/20/hash-table/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/08/12/managed-unmanagedcode.markdown/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/27/BFS&amp;DFS/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/26/Graph/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/07/21/The-Witness-Puzzle-Solver/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/07/21/MD-Syntax/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/05/15/Priority-Queue/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://zinglix.xyz/2017/05/15/Heap/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2016/11/29/hello-blog/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/05/15/Priority-Queue/</loc>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zinglix.xyz/2017/05/15/Heap/</loc>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/03/26/Stack/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/01/23/Tree/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2016/11/30/study-notes-list/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/05/08/External-Sort/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/03/03/Sort/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://zinglix.xyz/2017/04/23/gitment/</loc>
-  <lastmod>2017-09-05T04:52:57+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://zinglix.xyz/2017/07/21/MD-Syntax/</loc>
+  <lastmod>2018-04-09T13:49:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
