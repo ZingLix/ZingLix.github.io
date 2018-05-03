@@ -218,7 +218,7 @@ bool empty() { return _start == _end; }
 
 ### [ ]操作符
 
-实现与数组相同的操作方式。
+实现与数组相同的操作方式，类似于`at()`但不提供越界检查。
 
 ``` cpp
 ref operator[](size_type n) { return *(_start + n); }
