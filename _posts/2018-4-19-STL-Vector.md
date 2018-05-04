@@ -40,9 +40,9 @@ typedef value_type* iterator;
 ``` cpp
 template <class T, class Alloc>
 typename vector<T, Alloc>::iterator vector<T, Alloc>::allocate_and_fill(size_type n, const T& x) {
-	iterator address = allocator::allocate(n);
-	uninitialized_fill_n(address, n, x);
-	return address;
+    iterator address = allocator::allocate(n);
+    uninitialized_fill_n(address, n, x);
+    return address;
 }
 ```
 
@@ -51,9 +51,9 @@ typename vector<T, Alloc>::iterator vector<T, Alloc>::allocate_and_fill(size_typ
 ``` cpp
 template <class T, class Alloc>
 void vector<T, Alloc>::fill_initialize(size_type n, const T& value) {
-	_start = allocate_and_fill(n, value);
-	_end = _start + n;
-	_tail = _end;
+    _start = allocate_and_fill(n, value);
+    _end = _start + n;
+    _tail = _end;
 }
 ```
 
@@ -72,8 +72,8 @@ explicit vector(size_type n) { fill_initialize(n, T()); }
 
 ```cpp
 ~vector() {
-	destroy(_start, _end);
-	allocator::deallocate(_start, _tail - _start);
+    destroy(_start, _end);
+    allocator::deallocate(_start, _tail - _start);
 }
 ```
 
@@ -84,28 +84,28 @@ explicit vector(size_type n) { fill_initialize(n, T()); }
 ```cpp
 template <class T, class Alloc>
 void vector<T, Alloc>::insert(iterator pos, size_type n, const T& value) {
-	if (n > 0) {
-		if (static_cast<size_type>(_tail - _end) >= n) {
-			auto elems_after = _end - pos;
-			iterator old_end = _end;
-			if (elems_after > n) {
-				uninitialized_copy(_end - n, _end, _end);
-				_end += n;
-				std::copy_backward(pos, old_end - n, old_end);
-				std::fill(pos, pos + n, value);
-			}
-			else {
-				uninitialized_copy(_end, n - elems_after, value);
-				_end += n - elems_after;
-				uninitialized_copy(pos, old_end, _end);
-				_end += elems_after;
-				std::fill(pos, old_end, value);
-			}
-		}
-		else {
-			insert_aux(pos, n, value);
-		}
-	}
+    if (n > 0) {
+        if (static_cast<size_type>(_tail - _end) >= n) {
+            auto elems_after = _end - pos;
+            iterator old_end = _end;
+            if (elems_after > n) {
+                uninitialized_copy(_end - n, _end, _end);
+                _end += n;
+                std::copy_backward(pos, old_end - n, old_end);
+                std::fill(pos, pos + n, value);
+            }
+            else {
+                uninitialized_copy(_end, n - elems_after, value);
+                _end += n - elems_after;
+                uninitialized_copy(pos, old_end, _end);
+                _end += elems_after;
+                std::fill(pos, old_end, value);
+            }
+        }
+        else {
+            insert_aux(pos, n, value);
+        }
+    }
 }
 ```
 
@@ -114,25 +114,25 @@ void vector<T, Alloc>::insert(iterator pos, size_type n, const T& value) {
 ``` cpp
 template <class T, class Alloc>
 void vector<T, Alloc>::insert_aux(iterator pos, const T& value) {
-	insert_aux(pos, 1, value);
+    insert_aux(pos, 1, value);
 }
 
 template <class T, class Alloc>
 void vector<T, Alloc>::insert_aux(iterator pos, size_type n, const T& value) {
-	const size_t old_size = size();
-	const size_t new_size = old_size == 0 ? 1 : old_size * 2;
-	auto new_start = allocator::allocate(new_size);
-	auto new_end = uninitialized_copy(_start, pos, new_start);
-	while (n--) {
-		construct(new_end, value);
-		++new_end;
-	}
-	new_end = uninitialized_copy(pos, _end, new_end);
-	destroy(_start, _end);
-	deallocate();
-	_start = new_start;
-	_end = new_end;
-	_tail = _start + new_size;
+    const size_t old_size = size();
+    const size_t new_size = old_size == 0 ? 1 : old_size * 2;
+    auto new_start = allocator::allocate(new_size);
+    auto new_end = uninitialized_copy(_start, pos, new_start);
+    while (n--) {
+        construct(new_end, value);
+        ++new_end;
+    }
+    new_end = uninitialized_copy(pos, _end, new_end);
+    destroy(_start, _end);
+    deallocate();
+    _start = new_start;
+    _end = new_end;
+    _tail = _start + new_size;
 }
 ```
 
@@ -143,13 +143,13 @@ void vector<T, Alloc>::insert_aux(iterator pos, size_type n, const T& value) {
 ``` cpp
 template <class T, class Alloc>
 void vector<T, Alloc>::push_back(const T& x) {
-	if (_end == _tail) {
-		insert_aux(end(), x);
-	}
-	else {
-		construct(_end, x);
-		++_end;
-	}
+    if (_end == _tail) {
+        insert_aux(end(), x);
+    }
+    else {
+        construct(_end, x);
+        ++_end;
+    }
 }
 ```
 
@@ -162,8 +162,8 @@ void vector<T, Alloc>::push_back(const T& x) {
 ``` cpp
 template <class T, class Alloc>
 void vector<T, Alloc>::pop_back() {
-	--_end;
-	destroy(_end);
+    --_end;
+    destroy(_end);
 }
 ```
 
@@ -174,12 +174,12 @@ void vector<T, Alloc>::pop_back() {
 ``` cpp
 template <class T, class Alloc>
 typename vector<T, Alloc>::iterator vector<T, Alloc>::erase(iterator pos) {
-	if (pos + 1 != _end) {
-		std::copy(pos + 1, _end, pos);
-	}
-	--_end;
-	destroy(_end);
-	return pos;
+    if (pos + 1 != _end) {
+        std::copy(pos + 1, _end, pos);
+    }
+    --_end;
+    destroy(_end);
+    return pos;
 }
 ```
 
@@ -188,10 +188,10 @@ typename vector<T, Alloc>::iterator vector<T, Alloc>::erase(iterator pos) {
 ``` cpp
 template <class T, class Alloc>
 typename vector<T, Alloc>::iterator vector<T, Alloc>::erase(iterator first, iterator last) {
-	iterator i = std::copy(last, _end, first);
-	destroy(i, _end);
-	_end = _end - (last - first);
-	return first;
+    iterator i = std::copy(last, _end, first);
+    destroy(i, _end);
+    _end = _end - (last - first);
+    return first;
 }
 ``` 
 ## 其他常用操作

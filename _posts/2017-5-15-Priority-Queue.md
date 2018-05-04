@@ -20,11 +20,11 @@ tags:
 ``` cpp
 class PriorityQueue :public Heap {
 public:
-	PriorityQueue(vector<int> vec);
-	void insert(int x);
-	int max();
-	int pop_max();
-	void increase_key(int i, int k);
+    PriorityQueue(vector<int> vec);
+    void insert(int x);
+    int max();
+    int pop_max();
+    void increase_key(int i, int k);
 };
 ```
 
@@ -44,7 +44,7 @@ public:
 ``` cpp
 int PriorityQueue::max()
 {
-	return Heap::heap[0];
+    return Heap::heap[0];
 }
 ```
 
@@ -56,11 +56,11 @@ int PriorityQueue::max()
 ``` cpp
 int PriorityQueue::pop_max()
 {
-	int tmp = Heap::heap[0];
-	Heap::heap[0] = Heap::heap[Heap::GetSize()-1];
-	Heap::heap.pop_back();
-	Heap::MaxHeapify(0);
-	return tmp;
+    int tmp = Heap::heap[0];
+    Heap::heap[0] = Heap::heap[Heap::GetSize()-1];
+    Heap::heap.pop_back();
+    Heap::MaxHeapify(0);
+    return tmp;
 }
 ```
 
@@ -69,11 +69,11 @@ int PriorityQueue::pop_max()
 ``` cpp
 void PriorityQueue::increase_key(int i, int k)
 {
-	Heap::heap[i] = k;
-	while (i > 0 && Heap::heap[Heap::parent(i)] < Heap::heap[i]) {
-		swap(Heap::heap[Heap::parent(i)], Heap::heap[i]);
-		i = Heap::parent(i);
-	}
+    Heap::heap[i] = k;
+    while (i > 0 && Heap::heap[Heap::parent(i)] < Heap::heap[i]) {
+        swap(Heap::heap[Heap::parent(i)], Heap::heap[i]);
+        i = Heap::parent(i);
+    }
 }
 ```
 
@@ -86,11 +86,9 @@ void PriorityQueue::increase_key(int i, int k)
 ``` cpp
 void PriorityQueue::insert(int x)
 {
-	Heap::heap.push_back(x);
-	this->increase_key(Heap::GetSize() - 1, x);
+    Heap::heap.push_back(x);
+    this->increase_key(Heap::GetSize() - 1, x);
 }
 ```
 
-> 图片和gif来自 [visualgo.net](https://visualgo.net/)
->
-> 源代码均以上传至 [GitHub](https://github.com/ZingLix/Data-Structures-and-Algorithm/tree/master/Heap)
+> 图片和gif根据 [visualgo.net](https://visualgo.net/) 制作

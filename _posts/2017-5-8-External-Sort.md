@@ -20,53 +20,57 @@ tags:
 ![CountingSort.gif](/img/in-post/ExternalSort/CountingSort.gif)
 
 这里arr是我们需要排序的数组，max记录了最大的数据，tmp用来不同数据的数量，ans为存放输出的数组。
-``` java
+
+``` cpp
 void counting_sort(vector<int>& arr, const int max) {
-	int *tmp = new int[max];
-	for (int i = 0; i < max; i++) tmp[i] = 0;  //初始化tmp
-	for (int i = 0; i < arr.size(); i++) tmp[arr[i]]++;     //此时tmp[i]即为i的数量
-	for (int i = 1; i < max; i++) tmp[i] += tmp[i - 1];
-	int *ans = new int[arr.size()];
-	for (int i = arr.size() - 1; i >= 0; i--) {
-		ans[tmp[arr[i]] - 1] = arr[i];
-		tmp[arr[i]]--;
-	}  //生成结果
-	for (int i = 0; i < arr.size(); i++) {
-		arr[i] = ans[i];
-	}  //拷贝回原数组
-	delete tmp;
-	delete ans;
+    int *tmp = new int[max];
+    for (int i = 0; i < max; i++) tmp[i] = 0;  //初始化tmp
+    for (int i = 0; i < arr.size(); i++) tmp[arr[i]]++;     //此时tmp[i]即为i的数量
+    for (int i = 1; i < max; i++) tmp[i] += tmp[i - 1];
+    int *ans = new int[arr.size()];
+    for (int i = arr.size() - 1; i >= 0; i--) {
+        ans[tmp[arr[i]] - 1] = arr[i];
+        tmp[arr[i]]--;
+    }  //生成结果
+    for (int i = 0; i < arr.size(); i++) {
+        arr[i] = ans[i];
+    }  //拷贝回原数组
+    delete tmp;
+    delete ans;
 }
 ```
 
 
 ## 基数排序
+
 基数排序的基本思想为先将末位相同的放在一起，再依次排列产生一个具有新顺序的数组，再依次对十位、百位直至最高位做相同操作。
+
 ![RadixSort.gif](/img/in-post/ExternalSort/RadixSort.gif)
+
 其中arr为要排序的数组，d为最高位。
 
-``` java
+``` cpp
 void radix_sort(vector<int>& arr,int d)
 {
-	for (int i = 1; i <= d; i++) Rsort(arr, i);  //依次对每一位排序
+    for (int i = 1; i <= d; i++) Rsort(arr, i);  //依次对每一位排序
 }
 
 void Rsort(vector<int> &arr, int i) {
-	vector<vector<int>> vec;
-	for (int i = 0; i < 10; i++) {
-		vector<int> tmp;
-		vec.push_back(tmp);
-	}
-	int flag = pow(10, i);
-	for (int i = 0; i < arr.size(); i++) {
-		vec[(arr[i] % flag) / (flag / 10)].push_back(arr[i]);  //放入对应的容器
-	}
-	int k = 0;
-	for (int i = 0; i < vec.size(); i++) {
-		for (int j = 0; j < vec[i].size(); j++) {
-			arr[k++] = vec[i][j];  //产生新数组
-		}
-	}
+    vector<vector<int>> vec;
+    for (int i = 0; i < 10; i++) {
+        vector<int> tmp;
+        vec.push_back(tmp);
+    }
+    int flag = pow(10, i);
+    for (int i = 0; i < arr.size(); i++) {
+        vec[(arr[i] % flag) / (flag / 10)].push_back(arr[i]);  //放入对应的容器
+    }
+    int k = 0;
+    for (int i = 0; i < vec.size(); i++) {
+        for (int j = 0; j < vec[i].size(); j++) {
+            arr[k++] = vec[i][j];  //产生新数组
+        }
+    }
 }
 ```
 
@@ -78,28 +82,26 @@ void Rsort(vector<int> &arr, int i) {
 
 arr为要排序的数组，vec用来记录桶中元素。
 
-``` java
+``` cpp
 void bucket_sort(vector<int>& arr) {
-	vector<vector<int>> vec;
-	for (int i = 0; i < 10; i++) {
-		vector<int> tmp;
-		vec.push_back(tmp);
-	}  //初始化桶
-	for (int i = 0; i < arr.size(); i++) {
-		vec[arr[i] / 10].push_back(arr[i]);
-	} //放入桶中
-	for (int i = 0; i < vec.size(); i++) {
-		counting_sort(vec[i], 100);
-	}  //对桶中元素排序，此处使用计数排序，也可使用其他排序方法
-	int k = 0;
-	for (int i = 0; i < vec.size(); i++) {
-		for (int j = 0; j < vec[i].size(); j++) {
-			arr[k++] = vec[i][j];
-		}
-	}  //将结果输出至原数组
+    vector<vector<int>> vec;
+    for (int i = 0; i < 10; i++) {
+        vector<int> tmp;
+        vec.push_back(tmp);
+    }  //初始化桶
+    for (int i = 0; i < arr.size(); i++) {
+        vec[arr[i] / 10].push_back(arr[i]);
+    } //放入桶中
+    for (int i = 0; i < vec.size(); i++) {
+        counting_sort(vec[i], 100);
+    }  //对桶中元素排序，此处使用计数排序，也可使用其他排序方法
+    int k = 0;
+    for (int i = 0; i < vec.size(); i++) {
+        for (int j = 0; j < vec[i].size(); j++) {
+            arr[k++] = vec[i][j];
+        }
+    }  //将结果输出至原数组
 }
 ```
 
-> 图片和gif来自 [visualgo.net](https://visualgo.net/)
->
-> 源代码均以上传至 [GitHub](https://github.com/ZingLix/Data-Structures-and-Algorithm/tree/master/Sort)
+> 图片和gif根据 [visualgo.net](https://visualgo.net/) 制作

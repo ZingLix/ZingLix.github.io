@@ -43,8 +43,8 @@ void DeleteList(List L);
 ``` cpp
 struct Node
 {
-	int x;
-	Position Next;
+    int x;
+    Position Next;
 };
 ```
 
@@ -54,7 +54,7 @@ struct Node
 ``` cpp
 int IsEmpty(List L)
 {
-	return L->Next == NULL;
+    return L->Next == NULL;
 }
 ```
 
@@ -62,18 +62,18 @@ int IsEmpty(List L)
 ``` cpp
 int IsLast(Position P)
 {
-	return P->Next == NULL;
+    return P->Next == NULL;
 }
 ```
 
 ### 寻找
 ``` cpp
 Position Find(int X, List L){
-	Position P = L->Next;
-	while (P != NULL&&P->x != X) {
-		P = P->Next;
-	}
-	return P;
+    Position P = L->Next;
+    while (P != NULL&&P->x != X) {
+        P = P->Next;
+    }
+    return P;
 }
 ```
 
@@ -82,11 +82,11 @@ Position Find(int X, List L){
 ### 寻找前驱元
 ``` cpp
 Position FindPrevious(int X, List L){
-	Position P = L;
-	while (P->Next->x != X&&P != NULL) {
-		P = P->Next;
-	}
-	return P;
+    Position P = L;
+    while (P->Next->x != X&&P != NULL) {
+        P = P->Next;
+    }
+    return P;
 }
 ```
 传入参数x为要寻找的值，L为链表头节点，返回前驱元指针。
@@ -96,10 +96,10 @@ Position FindPrevious(int X, List L){
 
 ``` cpp
 void Insert(int data, Position P) {
-	List tmp = (List)malloc(sizeof(Node));
-	tmp->x = data;
-	tmp->Next = P->Next;
-	P->Next = tmp;
+    List tmp = (List)malloc(sizeof(Node));
+    tmp->x = data;
+    tmp->Next = P->Next;
+    P->Next = tmp;
 }
 ```
 
@@ -109,12 +109,12 @@ void Insert(int data, Position P) {
 ### 删除节点
 ``` cpp
 void Delete(int X, List L){
-	Position P = FindPrevious(X, L);
-	if (P != NULL) {
-		Position Tmp = P->Next;
-		P->Next = Tmp->Next;
-		free(Tmp);
-	}
+    Position P = FindPrevious(X, L);
+    if (P != NULL) {
+        Position Tmp = P->Next;
+        P->Next = Tmp->Next;
+        free(Tmp);
+    }
 }
 ```
 通过寻找前驱元，改变其指向的下一个结点地址，并释放要删除的结点内存，从而达到删除目的。
@@ -123,13 +123,13 @@ void Delete(int X, List L){
 ### 删除链表
 ``` cpp
 void DeleteList(List L){
-	Position P = L->Next,Tmp;
-	L->Next = NULL;
-	while (P != NULL) {
-		Tmp = P->Next;
-		free(P);
-		P = Tmp;
-	}
+    Position P = L->Next,Tmp;
+    L->Next = NULL;
+    while (P != NULL) {
+        Tmp = P->Next;
+        free(P);
+        P = Tmp;
+    }
 }
 ```
 从头节点开始一个个向后释放内存。
