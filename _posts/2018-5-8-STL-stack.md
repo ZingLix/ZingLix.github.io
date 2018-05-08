@@ -39,30 +39,30 @@ template<class T,class Container=deque<T>>
 class stack
 {
 public:
-	using container_type = Container;
-	using value_type =typename Container::value_type;
-	using size_type = typename Container::size_type;
-	using reference = typename Container::reference;
-	using const_reference = typename Container::const_reference;
+    using container_type = Container;
+    using value_type =typename Container::value_type;
+    using size_type = typename Container::size_type;
+    using reference = typename Container::reference;
+    using const_reference = typename Container::const_reference;
 
 protected:
-	Container c;
+    Container c;
 
 public:
-	explicit stack(const Container& cont):c(cont){}
-	stack(const stack& other):c(other.c){}
+    explicit stack(const Container& cont):c(cont){}
+    stack(const stack& other):c(other.c){}
 
-	stack& operator=(const stack& other) { 
-		c = other;
-		return *this;
-	}
+    stack& operator=(const stack& other) { 
+        c = other;
+        return *this;
+    }
 
-	reference top() { return c.back(); }
-	bool empty() const { return c.empty(); }
-	size_type size() const { return c.size(); }
-	void push(const value_type& value) { c.push_back(value); }
-	void push(value_type&& value) { c.push_back(std::move(value)); }
-	void pop() { c.pop_back(); }
+    reference top() { return c.back(); }
+    bool empty() const { return c.empty(); }
+    size_type size() const { return c.size(); }
+    void push(const value_type& value) { c.push_back(value); }
+    void push(value_type&& value) { c.push_back(std::move(value)); }
+    void pop() { c.pop_back(); }
 };
 ```
 
