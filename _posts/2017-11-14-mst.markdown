@@ -27,26 +27,21 @@ Kruskal 算法中先用一个不相交集将每一个结点都当作一棵树的
 如下为 Kruskal 算法的示例代码。
 
 ``` cpp
-void Graph::MST_Kruskal()
+void MST_Kruskal()
 {
-  DisjointSet<Vertex*> Set(G);     //将所有结点放入不相交集中并互相独立
-    priority_queue<Edge*> H;      //用一个优先队列来保证边的权重从小到大
+    DisjointSet<Vertex> Set(G)   //将所有结点放入不相交集中并互相独立
+    priority_queue<Edge> H(G.E)      //用一个优先队列来保证边的权重从小到大
 
-    for (int i = 0; i < v; i++) {
-        for (int j = 0; j < i; j++) {
-            if (graph[i][j] != 0) H.push(&graph[i][j]);
-        }
-    }
-    Edge E;
     while (!H.empty()) {
-        E = *H.top();
+        Edge E = H.pop();
         if (Set.Find(E.v1) != Set.Find(E.v2)) {   //判断两个结点是否处于同一颗树中
             Set.Union(E.v1, E.v2);
         }
-        H.pop();
     }
 }
 ```
+
+> [Java实现](https://github.com/ZingLix/Homework/blob/master/Data%20Structures%20%26%20Algorithm/Homework/CH9.15/src/Graph_kruskal.java#L52)供参考
 
 ## Prim 算法
 
@@ -56,29 +51,34 @@ Prim 算法可以从任意一个结点开始，然后逐步长大直至所有的
 
 有时会遇到最小的边两侧的结点已经被加入集合中，此时应将这条边舍去，因为最小生成树不能够成环。
 
-实际实现中用一个优先队列来更快速的得到一条新的边，每个结点都赋予一个 key 和 parent 属性来保存与当前结点中连接最小的权重和前一个结点。
-
-如下代码展示了主要的操作，省略了部分细节。
+实际实现中用一个优先队列来更快速的得到一条新的边，每个结点都赋予一个 key 和 parent 属性来保存与当前结点中连接最小的权重和前一个结点。伪代码如下。
 
 ``` cpp
-void Graph::MST_Prim(Vertex V) {
-    for (int i = 0; i < v; i++) {  //将所有结点初始化
-        Ver[i].key = INF;
-        Ver[i].parent = nullptr;
+void MST_Prim(Vertex V) {
+    for (Vertex v in G.V) {  //将所有结点初始化
+        v.key = INF;
+        v.parent = null;
     }
+
     V.key = 0;
-    std::priority_queue<Vertex> Q(G);  //以key为属性维护优先队列
-    Vertex u;
+    priority_queue<Vertex> Q(G.V);  //以key为属性维护优先队列，并将所有的结点放入
+    
     while (!Q.empty()) {
-        u = Q.top();
-        for (int i = 0; i < v; i++) {   //遍历所有与 u 相连结点
-            Vertex tmp = Ver[i];
-            if (edge[u][tmp] != 0 && edge[u][tmp] < tmp.key) {  //如果存在边且权重小
-                Ver[i].parent = u;
-                Ver[i].key = edge[u][tmp];
+        Vertex u = Q.pop();
+        for (Vertex v in u.adj) {   //遍历所有与 u 相连结点
+            if (v in Q && w(u, v) < v.key) {  //如果存在边且权重小
+                v.parent = u
+                v.key = w(u, v)
             }
         }
-        Q.pop();
     }
 }
 ```
+
+> [Java实现](https://github.com/ZingLix/Homework/blob/master/Data%20Structures%20%26%20Algorithm/Homework/CH9.15/src/Graph_prim.java#L54)供参考
+
+## 总结
+
+两个方法每次都是找最小的边加入到结果中。 Kruskal 算法每次挑选所有边中权重最小的，Prim 算法每次找与现有结点相连边中权重最小的。每次加入的时候 Kruskal 需要判断这条边是否需要，即两个结点是否已经在树中，而 Prim 算法则只需要找到权中最小的即可。
+
+两个方法效率基本相同，一般实现下时间复杂度均为 $$O(E lgV)$$，但 Prim 算法利用斐波那契堆还可进一步优化到 $$O(E + VlgV)$$。
