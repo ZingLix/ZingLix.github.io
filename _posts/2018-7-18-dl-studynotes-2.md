@@ -2,7 +2,7 @@
 layout:     post
 title:      "Logistic 回归、梯度下降及向量化"
 subtitle:   "深度学习学习笔记 - Week 1 & 2"
-date:       2018-6-16
+date:       2018-7-18
 author:     "ZingLix"
 header-img: "img/post-md.jpg"
 catalog: true
