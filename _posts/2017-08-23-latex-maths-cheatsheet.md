@@ -4,7 +4,7 @@
   date: "2017-08-23"
   subtitle:   "Latex Math Symbol Cheat Sheet"
   author:     "ZingLix"
-  header-img: "img/post-9.jpg"
+  header-img: "img/post-20.jpg"
   catalog: true
   tags:
       - Latex

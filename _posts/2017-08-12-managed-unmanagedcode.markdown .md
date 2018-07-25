@@ -5,7 +5,7 @@ date: "2017-08-12 12:35"
 subtitle:   "Managed & Unmanaged Code"
 date:       2017-8-12
 author:     "ZingLix"
-header-img: "img/post-9.jpg"
+header-img: "img/post-21.jpg"
 catalog: true
 tags:
     - .NET

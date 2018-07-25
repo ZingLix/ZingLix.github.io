@@ -4,7 +4,7 @@ title:      "Logistic 回归、梯度下降及向量化"
 subtitle:   "深度学习学习笔记 - Week 1 & 2"
 date:       2018-7-18
 author:     "ZingLix"
-header-img: "img/post-md.jpg"
+header-img: "img/post-17.jpg"
 catalog: true
 tags:
     - 深度学习

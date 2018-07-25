@@ -4,7 +4,7 @@ title: "最小生成树算法"
 date: "2017-09-06"
 subtitle:   "Kruskal & Prim's Algorithm"
 author:     "ZingLix"
-header-img: "img/post-md.jpg"
+header-img: "img/post-19.jpg"
 catalog: true
 tags:
     - 图

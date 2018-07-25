@@ -4,7 +4,7 @@ title:      "算法 - 线性时间排序"
 subtitle:   "Algorithm - External Sort"
 date:       2017-5-8
 author:     "ZingLix"
-header-img: "img/post-5.jpg"
+header-img: "img/post-23.jpg"
 catalog: true
 tags:
     - 算法
