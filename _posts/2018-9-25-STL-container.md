@@ -54,10 +54,10 @@ tags:
 
 |容器|数据结构|集合内容|键是否唯一|
 |:---:|:---:|:---:|:---:|
-|unordered_set|哈希表|键|是|
-|unordered_map|哈希表|键值对|是|
-|unordered_multiset|哈希表|键|否|
-|unordered_multimap|哈希表|键值对|否|
+|[unordered_set](/2018/09/29/unordered_set&map/)|哈希表|键|是|
+|[unordered_map](/2018/09/29/unordered_set&map/)|哈希表|键值对|是|
+|[unordered_multiset](/2018/09/29/unordered_set&map/)|哈希表|键|否|
+|[unordered_multimap](/2018/09/29/unordered_set&map/)|哈希表|键值对|否|
 
 相对于关联容器，上层行为表现一致，底层数据结构更换为了哈希表获得了更好的均摊性能，但同时付出了不可按序访问的代价。
 
