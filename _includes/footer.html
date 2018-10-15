@@ -107,8 +107,11 @@
 
         // init
         var P = $(_containerSelector),a,n,t,l,i,c;
+        {% if page.cataloglimit %}
+        a = P.find('h1,h2,h3');
+        {% else if %}
         a = P.find('h1,h2,h3,h4,h5,h6');
-
+        {% endif %}
         // clean
         $(selector).html('')
         a.each(function () {
