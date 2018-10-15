@@ -8,7 +8,6 @@ header-img: "img/post-2.jpg"
 catalog: true
 tags:
     - 数据结构
-    - 链表
 ---
 
 ## 什么是链表

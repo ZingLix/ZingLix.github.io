@@ -1,13 +1,14 @@
 ---
 layout: "post"
-title: "Git 操作总结"
+title: "git 操作总结"
 date: "2017-09-06"
-subtitle:   "Git Cheat Sheet"
+subtitle:   "git Cheat Sheet"
 author:     "ZingLix"
 header-img: "img/post-md.jpg"
 catalog: true
 tags:
     - git
+    - CheatSheet
 ---
 
 Git 是目前世界上最先进的分布式版本控制系统，Windows 环境下可以在[官网](https://git-scm.com/)下载安装，Ubuntu 等 Linux 环境下可以直接用 `sudo apt-get install git` 安装。

@@ -8,7 +8,7 @@ header-img: "img/post-md.jpg"
 catalog: true
 tags:
     - Markdown
-    - 总结
+    - CheatSheet
 ---
 
 鉴于最近 Markdown 使用比较多，在 Github 和这一博客都需要用到 Markdown ，所以写了一篇这一文章来总结下语法。

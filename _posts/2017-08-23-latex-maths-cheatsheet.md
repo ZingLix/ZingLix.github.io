@@ -8,6 +8,7 @@
   catalog: true
   tags:
       - Latex
+      - CheatSheet
 ---
 
 Latex 的一大优点就是其可以写出优美的数学公式，本博客也使用 MathJax 来得到 Latex 中数学公式的效果。但是由于其有自己的语法，所以写了这篇文章以整理数学公式相关的内容。

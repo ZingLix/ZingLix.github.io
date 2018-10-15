@@ -8,7 +8,6 @@ header-img: "img/post-23.jpg"
 catalog: true
 tags:
     - 算法
-    - 排序
 ---
 
 之前[在这](/2017/03/03/Sort/)我们已经讨论过快排、归并等排序方法，这些方法都具有一个特点：各元素间顺序依赖于比较，所以这些算法都被称为比较排序，对于这类方法，最优的下界为O(n lgn)。然而我们在这讨论为三种线性时间复杂度的排序方法：计数排序（Counting Sort）、基数排序（Radix Sort）和桶排序（Bucket Sort）。
