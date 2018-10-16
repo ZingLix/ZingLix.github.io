@@ -3,8 +3,8 @@ title: ZingLix Blog
 SEOTitle: ZingLix Blog
 header-img: img/home-bg.jpg
 email: zinglix.liu@gmail.com
-#description: "A "
-#keyword: "ZingLix"
+description: "这里是 ZingLix 的个人博客，与你一起在计算机的世界探索~"
+keyword: "ZingLix"
 url: "https://zinglix.xyz"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
