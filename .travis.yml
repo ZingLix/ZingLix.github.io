@@ -1,10 +1,10 @@
 language: ruby
 rvm:
-  - 2.4.1
+  - 2.5.1
 
 script: jekyll build
 
-install: sudo gem install jekyll-paginate
+install: gem install jekyll jekyll-paginate
 
 sudo: required 
 exclude: [vendor]
