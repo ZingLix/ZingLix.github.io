@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.4.1
+
+script: jekyll build
+
+install: sudo gem install jekyll-paginate
+
+sudo: required 
+exclude: [vendor]
+cache: bundler 
+
