@@ -10,3 +10,6 @@ sudo: required
 exclude: [vendor]
 cache: bundler 
 
+
+notifications:
+  email: false

@@ -1,4 +1,4 @@
-﻿![Build Status](https://travis-ci.com/ZingLix/ZingLix.github.io.svg?branch=master)
+﻿[![Build Status](https://travis-ci.com/ZingLix/ZingLix.github.io.svg?branch=master)](https://travis-ci.com/ZingLix/ZingLix.github.io)
 
 Personal blog on [zinglix.xyz](https://zinglix.xyz).
 
