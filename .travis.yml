@@ -4,7 +4,7 @@ rvm:
 
 script: jekyll build
 
-install: gem install jekyll jekyll-paginate
+install: gem install jekyll jekyll-paginate jekyll-sitemap
 
 sudo: required 
 exclude: [vendor]
