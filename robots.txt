@@ -1,2 +1,4 @@
 User-agent: *
-Allow:¡¡/
+Disallow: /page*$
+Disallow: /offline.html
+Allow: /
