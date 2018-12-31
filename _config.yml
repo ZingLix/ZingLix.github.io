@@ -5,15 +5,13 @@ header-img: img/home-bg.jpg
 email: zinglix.liu@gmail.com
 description: "这里是 ZingLix 的个人博客，与你一起在计算机的世界探索~"
 keyword: "ZingLix"
-url: "https://zinglix.xyz"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
-
-
+url: "https://zinglix.xyz" # your host, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
 RSS: false
-weibo_username:     2816853323
-github_username:     ZingLix
+weibo_username: 2816853323
+github_username: ZingLix
 #zhihu_username:     huxpro
 #github_username:    huxpro
 #twitter_username:  huxpro
@@ -24,16 +22,21 @@ github_username:     ZingLix
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md","LICENSE"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
+exclude:
+  [
+    "less",
+    "node_modules",
+    "Gruntfile.js",
+    "package.json",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+  ]
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-plugins: [jekyll-paginate,jekyll-sitemap]
-
-
+plugins: [jekyll-paginate, jekyll-sitemap, jemoji]
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -41,7 +44,7 @@ plugins: [jekyll-paginate,jekyll-sitemap]
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+  input: GFM # use Github Flavored Markdown !important
   syntax_highlighter_opts:
     span:
       line_numbers: false
@@ -49,31 +52,23 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-
 # Gitment settings
 Client_ID: e142464e8cd0a33bb821
 Client_Secret: ca41bf15c586cbba02128f2ef1b9840af3d9ea67
 
-
 # Analytics settings
 # Google Analytics
-ga_track_id: 'UA-88177731-1'            # Format: UA-xxxxxx-xx
+ga_track_id: "UA-88177731-1" # Format: UA-xxxxxx-xx
 ga_domain: zinglix.xyz
 
-
-
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
+sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "Just a student majors in computer science. Always be better."
-sidebar-avatar: /img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
+sidebar-avatar: /img/avatar.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1             # A tag will be featured if the size of it is more than this condition value
-
-
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"

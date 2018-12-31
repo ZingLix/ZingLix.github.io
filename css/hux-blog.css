@@ -1538,6 +1538,11 @@ img::-moz-selection {
   height: auto;
   margin: 1.5em auto 1.6em auto;
 }
+.post-container .emoji {
+  display: inline;
+  margin: 0 2px 0 2px ;
+  padding-bottom: 4px;
+}
 /* Hux Optimize UserExperience */
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
@@ -1647,3 +1652,4 @@ img::-moz-selection {
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
+
