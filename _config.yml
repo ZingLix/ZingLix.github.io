@@ -83,4 +83,11 @@ page-mathjax: true
 collections:
   port:
 
+defaults:
+  -
+    scope:
+      path: "offline.html"
+    values:
+      sitemap: false
+
 port: 4001
