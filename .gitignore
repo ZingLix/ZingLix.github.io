@@ -7,3 +7,5 @@ npm-debug.log
 *.sh
 _includes/123.apk
 .vscode
+.jekyll-cache
+Gemfile.lock
