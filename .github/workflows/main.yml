@@ -12,7 +12,7 @@ jobs:
           sudo apt install ruby-full build-essential zlib1g-dev
           sudo gem install jekyll bundler
           sudo bundle install
-          jekyll build --trace
+          bundle exec jekyll build --trace
           ls
           
 
