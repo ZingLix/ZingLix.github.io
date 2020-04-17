@@ -8,8 +8,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        uses: jerryjvl/jekyll-build-action@v1
-        
+        run: |
+          sudo apt install ruby-full build-essential zlib1g-dev
+          sudo gem install jekyll bundler
+          sudo bundle install
+          jekyll build --trace
+          ls
+          
+
       # 使用云开发 Github Action 部署
       - name: Deploy static to Tencent CloudBase
         id: deployStatic
