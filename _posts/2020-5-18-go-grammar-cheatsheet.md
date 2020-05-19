@@ -8,6 +8,7 @@ header-img: "img/post-22.jpg"
 catalog: true
 tags:
   - Go
+  - CheatSheet
 ---
 
 > 本文并不是一篇面向新手的入门文章，而是面向于有一定编程经验而且希望快速上手 Go 语言的人

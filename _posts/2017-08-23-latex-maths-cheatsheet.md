@@ -41,7 +41,7 @@ $$\frac{x}{y}\ \ \tfrac{x}{y}$$
 
 用`\frac{x}{1+\frac{y}}`可以得到连分数，但是使用`\cfrac`代替可以得到更大的分数。
 
-$$ \frac{2}{c + \frac{2}{d + \frac{2}{4}}} \ \  \cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} \ \   $$
+$$\frac{2}{c + \frac{2}{d + \frac{2}{4}}} \ \  \cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}}$$
 
 ## 矩阵
 
@@ -214,7 +214,23 @@ $$
 |`\log_{10}`|$$\log_{10}$$|`\ker`|$$\ker$$|`\deg`|$$\deg$$|
 |`\gcd`|$$\gcd$$|`\Pr`|$$\Pr$$|`\det`|$$\det$$|
 |`\hom`|$$\hom$$|`\arg`|$$\arg$$|`\dim`|$$\dim$$|
-|`\bmod`|$$\bmod$$|`\equiv`|$$\equiv$$|
+|`\bmod`|$$\bmod$$|
+
+## 二元运算符
+
+|代码|效果|代码|效果|代码|效果|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|`+`|$$+$$|`-`|$$-$$|`\pm`|$$\pm$$|
+|`\mp`|$$\mp$$|`\dotplus`|$$\dotplus$$|`\times`|$$\times$$|
+|`\div`|$$\div$$|`\divideontimes`|$$\divideontimes$$|`\backslash`|$$\backslash$$|
+|`\cdot`|$$\cdot$$|`\ast`|$$\ast$$|`\star`|$$\star$$|
+|`\circ`|$$\circ$$|`\bullet`|$$\bullet$$|`\boxplus`|$$\boxplus$$|
+|`\boxminus`|$$\boxminus$$|`\boxtimes`|$$\boxtimes$$|`\boxdot`|$$\boxdot$$|
+|`\oplus`|$$\oplus$$|`\ominus`|$$\ominus$$|`\otimes`|$$\otimes$$|
+|`\oslash`|$$\oslash$$|`\odot`|$$\odot$$|`\circleddash`|$$\circleddash$$|
+|`\circledcirc`|$$\circledcirc$$|`\circledast`|$$\circledast$$|`\bigoplus`|$$\bigoplus$$|
+|`\bigotimes`|$$\bigotimes$$|`\bigodot`|$$\bigodot$$|`\equiv`|$$\equiv$$|
+
 
 ## 集合
 
@@ -229,6 +245,9 @@ $$
 |`\sqsupset`|$$\sqsupset$$|`\sqsupseteq`|$$\sqsupseteq$$|`\sqcap`|$$\sqcap$$|
 |`\sqcup`|$$\sqcup$$|`\bigsqcup`|$$\bigsqcup$$|`\cap`|$$\cap$$
 |`\varnothing`|$$\varnothing$$|`\cap`|$$\cap$$
+|`\nsubseteq`|$$\nsubseteq$$|`\nsupseteq`|$$\nsupseteq$$|`\nsubseteqq`|$$\nsubseteqq$$|
+|`\nsupseteqq`|$$\nsupseteqq$$|`\subseteqq`|$$\sqsubset$$|`\supseteqq`|$$\sqsubseteq$$|
+|`\sqsupset`|$$\sqsupset$$|`\sqsupseteq`|$$\sqsupseteq$$|`\sqcap`|$$\sqcap$$|
 
 ## 逻辑运算符
 
@@ -260,6 +279,7 @@ $$
 |`\Diamond`|$$\Diamond$$|`\Box`|$$\Box$$|`\triangle`|$$\triangle$$|
 |`\angle`|$$\angle$$|`\perp`|$$\perp$$|`\mid`|$$\mid$$|
 |`\nmid`|$$\nmid$$|`\|`|$$\|$$|`45^\circ`|$$45^\circ$$|
+|`\sphericalangle`|$$\sphericalangle$$|`\bigtriangledown`|$$\bigtriangledown$$|
 
 ## 希腊字母
 
