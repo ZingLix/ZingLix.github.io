@@ -53,7 +53,7 @@
     }
 </script>
 
-{% if page.title == 'Archive' %}
+{% if page.title == 'Archive' or page.title == 'Papernote' %}
 <!-- jquery.tagcloud.js -->
 <script>
     async('{{ "/js/jquery.tagcloud.js" | prepend: site.baseurl }}', function () {

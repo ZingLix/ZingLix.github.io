@@ -37,13 +37,22 @@ header.intro-header .header-mask{
             <div class="post-heading">
                 <div class="tags">
                     {% for tag in page.tags %}
+                    {%- assign identifier = tag | slice: -3, 3 -%}
+                    {%- if identifier != "_pn" -%}
                     <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+                    {%- else -%}
+                    {%- assign raw_text = tag |remove: "_pn"-%}
+                    <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }}</a>
+                    {% endif %}
                     {% endfor %}
                 </div>
                 <h1>{{ page.title }}</h1>
                 {% comment %} always create a h2 for keeping the margin {% endcomment %}
                 <h2 class="subheading">{{ page.subtitle }}</h2>
                 <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                {% if page.src != nil %}
+                <span class="meta" style="margin-top:4px">Paper Source: <a href="{{page.srclink}}">{{page.src}} </a></span>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -75,7 +84,13 @@ header iframe{
             <div class="post-heading">
                 <div class="tags">
                     {% for tag in page.tags %}
+                    {%- assign identifier = tag | slice: -3, 3 -%}
+                    {%- if identifier != "_pn" -%}
                     <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+                    {%- else -%}
+                    {%- assign raw_text = tag[0] |remove: "_pn"-%}
+                    <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{raw_text }}">{{ raw_text}}</a>
+                    {% endif %}
                     {% endfor %}
                 </div>
                 <h1>{{ page.title }}</h1>

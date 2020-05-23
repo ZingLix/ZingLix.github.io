@@ -4,6 +4,7 @@ description: "凡心所向，素履以往"
 ---
 
 {% for post in paginator.posts %}
+{% if post.papernote != true %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -23,6 +24,7 @@ description: "凡心所向，素履以往"
     </p>
 </div>
 <hr>
+{% endif %}
 {% endfor %}
 
 <!-- Pager -->
