@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /offline.html
+Disallow: /MathJax/
 Allow: /
