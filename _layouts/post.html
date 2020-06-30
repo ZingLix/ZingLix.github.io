@@ -18,8 +18,17 @@ layout: default
                 col-md-10 col-md-offset-1
                 post-container">
 
-				{{ content }}
-
+                {{ content }}
+                {% if page.papernote != nil %}
+                <blockquote>
+                    <p>文中出现任何错误或者对于论文内容想要进行探讨，可以在网页最下方找到联系方式<a href="mailto:me@zinglix.xyz">邮件联系我</a>，共同学习进步 <img class="emoji"
+                            title=":smirk:" alt=":smirk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png"
+                            height="20" width="20"></p>
+                    {% if page.src != nil %}
+                    <p>论文来源：<a href="{{page.srclink}}">{{page.srcquote}}</a></p>
+                    {% endif %}
+                </blockquote>
+                {% endif %}
                 <hr style="visibility: hidden;">
 
                 <ul class="pager">
@@ -41,7 +50,7 @@ layout: default
                     {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">
-                <div id="gitalk-container"></div>
+               
                
             </div>
 
