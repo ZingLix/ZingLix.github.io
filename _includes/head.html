@@ -50,10 +50,23 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/hux-blog.1.min.css" | prepend: site.baseurl }}">
 
-    <script data-ad-client="ca-pub-5810024348822097" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
     <!-- Custom Fonts -->
     <link href="/css/iconfont.min.css" rel="stylesheet" type="text/css">
+
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+    <script>
+        $(window).load(function () {
+            NProgress.done();
+        });
+
+        $(document).ready(function () {
+            NProgress.configure({ easing: 'ease', speed: 500 });
+            NProgress.start();
+        });
+    </script>
 </head>
