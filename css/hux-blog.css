@@ -605,12 +605,13 @@ pre.highlight {
 .search-page .search-icon-close-container {
   position: absolute;
   z-index: 1;
-  padding: 16px;
+  padding: 20px;
+  padding-right: 32px;
   top: 0;
   right: 2px;
 }
 .search-page .search-icon-close-container i {
-  font-size: 20px;
+  font-size: 32px;
 }
 .search-page #search-input {
   font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;

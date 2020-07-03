@@ -42,17 +42,25 @@ header.intro-header .header-mask{
                     <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
                     {%- else -%}
                     {%- assign raw_text = tag |remove: "_pn"-%}
-                    <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }}</a>
+                    <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }} (论文)</a>
                     {% endif %}
                     {% endfor %}
                 </div>
                 <h1>{{ page.title }}</h1>
                 {% comment %} always create a h2 for keeping the margin {% endcomment %}
                 <h2 class="subheading">{{ page.subtitle }}</h2>
-                <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
-                {% if page.src != nil %}
-                <span class="meta" style="margin-top:4px">Paper Source: <a href="{{page.srclink}}">{{page.src}} </a></span>
-                {% endif %}
+                <span class="meta">
+                    <i style="margin-right: 2px;" class="fas fa-user"></i>
+                    {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
+                    <i style="margin-left: 12px;margin-right: 2px;" class="far fa-calendar-alt"></i>
+                    {{ page.date | date: "%B %-d, %Y" }}
+
+                    {% if page.src != nil %}
+                        <i style="margin-left: 12px;margin-right: 2px;" class="fas fa-link"></i>
+                        <a href="{{page.srclink}}">{{page.src}} </a>
+                    {% endif %}
+                </span>
+
             </div>
         </div>
     </div>
