@@ -33,10 +33,13 @@ exclude:
     "LICENSE",
   ]
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-
+logo: icon.png
+lang: zh_CN
+webmaster_verifications:
+  google: fgb5ErG0v88HE1O1cnghOjnrgBtHepdy4iPOJ1x8WdI
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-plugins: [jekyll-paginate, jekyll-sitemap, jemoji]
+plugins: [jekyll-paginate, jekyll-sitemap, jemoji, jekyll-seo-tag]
 
 # Markdown settings
 # replace redcarpet to kramdown,
