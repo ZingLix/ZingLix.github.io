@@ -12,4 +12,4 @@ Hey，我是 **ZingLix** (别问我这名字什么意思我也不知道我怎么
 
 我也不知道之后还会学到些什么，反正学了再说：D
 
-Always be better.
+Stay curious and keep learning.
