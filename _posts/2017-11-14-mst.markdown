@@ -8,6 +8,7 @@ header-img: "img/post-19.jpg"
 catalog: true
 tags:
     - 图
+    - 算法
 ---
 
 ## 基本概念
