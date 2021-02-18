@@ -19,32 +19,7 @@ tags:
 
 这边引用 [Jepson](https://jepsen.io/consistency) 的一张关于一致性模型的图
 
-<div style="text-align: center;" class="mermaid">
-graph BT;
-    RU(Read Uncommited)-->RC(Read Committed);
-    RC-->CS(Cursor Stability);
-    RC-->MAV(Monotonic Atomic View);
-    CS-->RR(Repeatable Read);
-    MAV-->RR;
-    MAV-->SI(Snapshot Isolation);
-    RR-->Ser(Serializable);
-    SI-->Ser;
-    Ser-->SS(Strict Serializable);
-    WFR(Writes Follow Reads)-->C(Causal);
-    MR(Monotonic Reads)-->PRAM;
-    MW(Monotonic Writes)-->PRAM;
-    RAW(Read Your Writes)-->PRAM;
-    PRAM-->C;
-    C-->Seq(Sequential);
-    Seq-->L(Linearizable);
-    L-->SS;
-    classDef red fill:#FFCDD2,stroke:#E57373,stroke-width:2px;
-    class SS,Ser,L,RR,SI,Seq,CS red;
-    classDef blue fill:#BBDEFB,stroke:#64B5F6,stroke-width:2px;
-    class MAV,RC,RU,WFR,MR,MW blue;
-    classDef yellow fill:#FFECB3,stroke:#FFD54F,stroke-width:2px;
-    class C,PRAM,RAW yellow;
-</div>
+![](/img/in-post/Consistency-model/1.png)
 
 这张图中，从下往上，模型对于操作序列的要求更严格，称为更强（stronger）的一致性模型，反之要求则更宽松，称为更弱（weaker）。而箭头 `A->B` 则表示满足 B 则一定满足 A，也就是说满足 B 的操作是满足 A 的操作的一个子集。
 
@@ -198,7 +173,7 @@ Write Skew 指两个事务同时读取到了一致的数据，然后分别进行
 
 ### 隔离级别
 
-为了避免上述问题，付出的代价是不同的，为了确定上述情况是否会发生，同时能够根据场景选择付出怎么样的代价，因此产生了隔离级别这一概念，用于指明可能发生的问题，并定义了如下数个隔离级别：
+想要避免上述问题，付出的代价是不同的。为了确定上述情况是否会发生，同时能够根据场景选择付出怎么样的代价，因此产生了隔离级别这一概念，用于指明可能发生的问题，共有如下数种隔离级别：
 
 - **Read Uncommitted**：事务执行过程中能够读到未提交的修改。
 - **Read Committed**：事务执行过程中能够读到已提交的修改。
