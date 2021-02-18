@@ -4,6 +4,15 @@ layout: default
 {% if site.page-mathjax %}
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {% endif %} 
+{% if site.page-mermaid %}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js"></script>
+<script>
+const conf = {
+    startOnLoad:true,
+}
+mermaid.initialize(conf);
+</script>
+{% endif %}
 <!-- Post Header -->
 {% include intro-header.html type='post' %}
 
