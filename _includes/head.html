@@ -5,7 +5,7 @@
     <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}ZingLix 空间{% endif %}</title>
     {% seo title=false %}
-    
+
     <!-- Open Graph -->
 
     {% case page.layout %}
@@ -34,15 +34,21 @@
     <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ " /css/bootstrap.min.css" | prepend: site.baseurl }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/hux-blog.2.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ " /css/hux-blog.2.min.css" | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
     <link href="/css/iconfont.min.css" rel="stylesheet" type="text/css">
 
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" rel="stylesheet"
+        type="text/css">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+
+    {% if site.google_adsense_id %}
+    <script data-ad-client="{{ site.google_adsense_id }}" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {% endif %}
 </head>
