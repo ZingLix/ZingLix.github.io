@@ -3,14 +3,14 @@ layout: default
 ---
 {% if site.page-mathjax %}
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-{% endif %} 
+{% endif %}
 {% if site.page-mermaid %}
 <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js"></script>
 <script>
-const conf = {
-    startOnLoad:true,
-}
-mermaid.initialize(conf);
+    const conf = {
+        startOnLoad: true,
+    }
+    mermaid.initialize(conf);
 </script>
 {% endif %}
 <!-- Post Header -->
@@ -21,7 +21,7 @@ mermaid.initialize(conf);
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -29,36 +29,38 @@ mermaid.initialize(conf);
 
                 {{ content }}
                 {% if page.papernote != nil %}
-                    {% capture tail %}{% include include/papernote_tail.md %}{% endcapture %}
-                    {{ tail | markdownify }}
+                {% capture tail %}{% include include/papernote_tail.md %}{% endcapture %}
+                {{ tail | markdownify }}
                 {% endif %}
                 <hr style="visibility: hidden;">
 
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
-                        <span>{{page.previous.title}}</span>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
+                            data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+                            Previous<br>
+                            <span>{{page.previous.title}}</span>
                         </a>
                     </li>
                     {% endif %}
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
-                        <span>{{page.next.title}}</span>
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
+                            data-placement="top" title="{{page.next.title}}">
+                            Next<br>
+                            <span>{{page.next.title}}</span>
                         </a>
                     </li>
                     {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">
-               
-               
+
+
             </div>
 
-    <!-- Side Catalog Container -->
-        {% if page.catalog %}
+            <!-- Side Catalog Container -->
+            {% if page.catalog %}
             <div class="
                 col-lg-2 col-lg-offset-0
                 visible-lg-block
@@ -72,14 +74,15 @@ mermaid.initialize(conf);
                     <ul class="catalog-body"></ul>
                 </div>
             </div>
-        {% endif %}
+            {% endif %}
 
-    <!-- Sidebar Container -->
+            <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
-
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5810024348822097"
+                    data-ad-slot="1970432264" data-ad-format="auto" data-full-width-responsive="true"></ins>
                 <!-- Featured Tags -->
                 {% include featured-tags.html bottom=true %}
 
@@ -94,20 +97,20 @@ mermaid.initialize(conf);
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("/js/anchor.min.js",function(){
+    async("/js/anchor.min.js", function () {
         anchors.options = {
-          visible: 'hover',
-          placement: 'right',
+            visible: 'hover',
+            placement: 'right',
 
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
@@ -116,11 +119,11 @@ mermaid.initialize(conf);
 <style>
     /* place left on bigger screen */
     @media all and (min-width: 800px) {
-        .anchorjs-link{
+        .anchorjs-link {
             position: absolute;
             left: -0.75em;
             font-size: 1.1em;
-            margin-top : -0.1em;
+            margin-top: -0.1em;
         }
     }
 </style>
