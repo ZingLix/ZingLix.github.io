@@ -81,8 +81,10 @@ layout: default
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
+                {% if site.google_adsense_id %}
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5810024348822097"
                     data-ad-slot="1970432264" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                {% endif %}
                 <!-- Featured Tags -->
                 {% include featured-tags.html bottom=true %}
 
@@ -92,9 +94,11 @@ layout: default
         </div>
     </div>
 </article>
+{% if site.google_adsense_id %}
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+{% endif %}
 {% if site.anchorjs %}
 <!-- async load function -->
 <script>
