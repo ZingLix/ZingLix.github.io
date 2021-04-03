@@ -1,8 +1,9 @@
 ---
-title: Archive
+title: Wiki
 layout: default
-description: 
-header-img: "img/post-22.jpg"
+subtitle: "知识库"
+header-img: "img/post-16.jpg"
+hide-in-nav: true
 tagcloud: true
 ---
 
@@ -19,35 +20,35 @@ https://github.com/kitian616/jekyll-TeXt-theme
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			{%- assign _all_posts = site.posts -%}
 			{%- assign _normal_posts = _all_posts | where_exp: "item", "item.papernote != true"  -%}
-			{%- assign _pn_posts = _all_posts | where_exp: "item", "item.papernote != nil"  -%}
+			{%- assign _kb_posts = _all_posts | where_exp: "item", "item.knowledge != nil"  -%}
 			<!-- Tags (as filter) -->
 			<div id='tag_cloud' class="tags tags-sup js-tags">
 				<a class="tag-button--all" data-encode="">
 					Show All
-					<sup>{{_normal_posts.size}}</sup>
+					<sup>{{_kb_posts.size}}</sup>
 				</a>
 
 				{%- capture tags -%}
 				{%- for tag in site.tags -%}
 				{%- assign identifier = tag[0] | slice: -3, 3 -%}
-				{%- if identifier != "_pn" and identifier != "_kb" -%}
+				{%- if identifier == "_kb" -%}
+				{%- assign raw_text = tag[0] |remove: "_kb"-%}
 				<a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
 					data-encode="{{ tag[0] | strip | url_encode }}"
 					class="tag-button"
-					title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-					{{ tag[0] }}
+					title="{{ raw_text }}" rel="{{ tag[1].size }}">
+					{{ raw_text}}
 					<sup>{{tag[1].size}}</sup>
 				</a>
-				__SEPERATOR__
 				{%- endif -%}
 				{%- endfor -%}
 				{%- endcapture -%}
-				{{ tags | split:'__SEPERATOR__'  |sort  }}
+				{{ tags | split:'</a>' | sort | join:'</a>' }}
 			</div>
 
             <!-- Article List -->
 			<div class="mini-post-list js-result d-none">
-			{%- assign _sorted_list = _normal_posts -%}
+			{%- assign _sorted_list = _kb_posts -%}
 			{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
 			{%- assign _sorted_list = _sorted_list | reverse -%}
 

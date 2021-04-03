@@ -4,7 +4,7 @@ subtitle: "凡心所向，素履以往"
 ---
 
 {% for post in paginator.posts %}
-{% if post.papernote != true %}
+{% if post.papernote != true and post.knowledge != true %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">

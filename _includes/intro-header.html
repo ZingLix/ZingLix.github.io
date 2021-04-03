@@ -38,11 +38,14 @@ header.intro-header .header-mask{
                 <div class="tags">
                     {% for tag in page.tags %}
                     {%- assign identifier = tag | slice: -3, 3 -%}
-                    {%- if identifier != "_pn" -%}
-                    <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-                    {%- else -%}
+                    {%- if identifier == "_pn" -%}
                     {%- assign raw_text = tag |remove: "_pn"-%}
                     <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }} (论文)</a>
+                    {%- else if identifier == "_kb"-%}
+                    {%- assign raw_text = tag |remove: "_kb"-%}
+                    <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }} </a>
+                    {% else %}
+                    <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
                     {% endif %}
                     {% endfor %}
                 </div>
