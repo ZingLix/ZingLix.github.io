@@ -57,10 +57,10 @@ kramdown:
 
 # Analytics settings
 # Google Analytics
-gtag_id: 
+gtag_id: G-D4V3NFFMB0
 ga_track_id: "UA-88177731-1" # Format: UA-xxxxxx-xx
 ga_domain: zinglix.xyz
-google_adsense_id: ca-pub-5810024348822097
+google_adsense_id: 
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
