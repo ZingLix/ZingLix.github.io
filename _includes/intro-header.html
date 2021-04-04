@@ -41,9 +41,9 @@ header.intro-header .header-mask{
                     {%- if identifier == "_pn" -%}
                     {%- assign raw_text = tag |remove: "_pn"-%}
                     <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }} (论文)</a>
-                    {%- else if identifier == "_kb"-%}
+                    {%- elsif identifier == "_kb"-%}
                     {%- assign raw_text = tag |remove: "_kb"-%}
-                    <a class="tag" href="{{ site.baseurl }}/papernote/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }} </a>
+                    <a class="tag" href="{{ site.baseurl }}/wiki/?tag={{ tag | url_encode }}" title="{{ raw_text }}">{{ raw_text }}</a>
                     {% else %}
                     <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
                     {% endif %}
