@@ -1,4 +1,4 @@
-**除文章中特殊声明外，本网站中所有文章及其中代码均由 ZingLix 创作或翻译，采用 [署名-非商业性使用 4.0 国际许可协议 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 进行许可。代码如有对应Github仓库则根据其中协议开源。**
+**除文章中特殊声明外，本网站中所有文章及其中代码均由 ZingLix 创作或翻译，采用 [署名-非商业性使用 4.0 国际许可协议 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 进行许可。代码如有对应 Github 仓库则根据其中协议开源。**
 
 ## 署名-非商业性使用 4.0 国际
 
@@ -14,4 +14,4 @@
 
 以上是许可协议概要，并不能作为替代，不具备法律效益。[了解详细许可协议](https://creativecommons.org/licenses/by-nc/4.0/legalcode)。
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="/img/by-nc.png" /></a>
