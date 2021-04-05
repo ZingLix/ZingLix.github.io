@@ -19,6 +19,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			{%- assign _all_posts = site.posts -%}
 			{%- assign _normal_posts = _all_posts | where_exp: "item", "item.papernote != true"  -%}
+			{%- assign _normal_posts = _normal_posts | where_exp: "item", "item.knowledge != true"  -%}
 			{%- assign _pn_posts = _all_posts | where_exp: "item", "item.papernote != nil"  -%}
 			<!-- Tags (as filter) -->
 			<div id='tag_cloud' class="tags tags-sup js-tags">
