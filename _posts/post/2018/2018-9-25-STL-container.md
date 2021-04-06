@@ -67,8 +67,8 @@ tags:
 
 |容器|默认底层容器|描述|
 |:---:|:---:|:---:|
-|[stack](/2018/05/08/STL-stack/)|deque|堆栈，后进先出（LIFO）|
-|[queue](/2018/05/15/STL-queue/)|deque|队列，先进先出（FIFO）|
-|[priority_queue](/2018/05/29/STL-priority_queue/)|vector|优先队列|
+|[stack](/2018/05/08/stl-stack/)|deque|堆栈，后进先出（LIFO）|
+|[queue](/2018/05/15/stl-queue/)|deque|队列，先进先出（FIFO）|
+|[priority_queue](/2018/05/29/stl-priority_queue/)|vector|优先队列|
 
-stack 和 queue 默认用 deque 实现为了让当数据量很大时，不会因元素移动导致过多的时间消耗。而 priority_queue 利用 vector 则是因为为了实现优先队列用到了 [heap](/2018/05/27/STL-heap/) 相关的函数，其中用到了大量的随机访问。
+stack 和 queue 默认用 deque 实现为了让当数据量很大时，不会因元素移动导致过多的时间消耗。而 priority_queue 利用 vector 则是因为为了实现优先队列用到了 [heap](/2018/05/27/stl-heap/) 相关的函数，其中用到了大量的随机访问。
