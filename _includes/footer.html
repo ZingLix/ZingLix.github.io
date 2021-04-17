@@ -95,9 +95,11 @@
     gtag('config', '{{ site.gtag_id }}');
 </script>
 {% endif %}
+{% if site.cf_token %}
 <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952f39ffb03640978b50e753f283b4a5"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cf_token }}"}'></script>
 <!-- End Cloudflare Web Analytics -->
+{% endif %}
 <!-- Baidu Analytics -->
 <script>
     var _hmt = _hmt || [];
