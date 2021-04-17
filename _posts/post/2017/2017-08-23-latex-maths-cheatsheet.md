@@ -146,7 +146,7 @@ $$
 功能|	语法|显示|
 |:---:|:---:|:---:|
 小括号|`\left( \frac{a}{b} \right)`|$$\left( \frac{a}{b} \right)$$
-中括号|`	\left[ \frac{a}{b} \right]`|$$ \left[ \frac{a}{b} \right]$$
+中括号|`\left[ \frac{a}{b} \right]`|$$ \left[ \frac{a}{b} \right]$$
 大括号|`\left\{ \frac{a}{b} \right\}`|$$ \left\{ \frac{a}{b} \right\}$$
 角括号|`\left \langle \frac{a}{b} \right \rangle`|$$ \left\langle \frac{a}{b} \right \rangle$$
 双竖线|`\left\Vert \frac{a}{b} \right\Vert`	|$$\left\Vert \frac{a}{b} \right\Vert$$
