@@ -77,7 +77,7 @@ service-worker: false
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: true
-page-mermaid: true
+page-mermaid: false
 
 # Friends
 
