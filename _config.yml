@@ -64,7 +64,7 @@ google_adsense_id:
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "Never grown up, but never stop growing."
+sidebar-about-description: "“I have never grown up, but I will never stop growing.”"
 sidebar-avatar: /img/avatar.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
