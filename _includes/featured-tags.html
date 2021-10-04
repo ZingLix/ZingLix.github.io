@@ -15,7 +15,7 @@
         {%- capture tags -%}
         {%- for tag in site.tags -%}{%- if tag[1].size > site.featured-condition-size -%}
                 {%- assign identifier = tag[0] | slice: -3, 3 -%}
-                {%- if identifier != "_pn" -%}
+                {%- if identifier != "_pn" and identifier != "_kb" -%}
                 <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}" 
                     href="{{ site.baseurl }}/archive/?tag={{ tag[0] | url_encode }}"
                     title="{{ tag[0] }}"
