@@ -1717,3 +1717,7 @@ img::-moz-selection {
     opacity: 0.5;
     pointer-events: all;
 }
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
