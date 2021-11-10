@@ -20,6 +20,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 			{%- assign _all_posts = site.posts -%}
 			{%- assign _normal_posts = _all_posts | where_exp: "item", "item.papernote != true"  -%}
 			{%- assign _normal_posts = _normal_posts | where_exp: "item", "item.knowledge != true"  -%}
+			{%- assign _wiki_posts = _all_posts | where_exp: "item", "item.knowledge != nil"  -%}
 			{%- assign _pn_posts = _all_posts | where_exp: "item", "item.papernote != nil"  -%}
 			<!-- Tags (as filter) -->
 			<div id='tag_cloud' class="tags tags-sup js-tags">
@@ -27,7 +28,16 @@ https://github.com/kitian616/jekyll-TeXt-theme
 					Show All
 					<sup>{{_normal_posts.size}}</sup>
 				</a>
-
+				<a class="tag-button--all" href="/papernote" title="论文笔记">
+					<i class="fa fa-external-link-alt"></i>
+					Papernote
+					<sup>{{_pn_posts.size}}</sup>
+				</a>
+				<a class="tag-button--all" href="/wiki" title="各种零碎的知识">
+					<i class="fa fa-external-link-alt"></i>
+					Wiki
+					<sup>{{_wiki_posts.size}}</sup>
+				</a>
 				{%- capture tags -%}
 				{%- for tag in site.tags -%}
 				{%- assign identifier = tag[0] | slice: -3, 3 -%}

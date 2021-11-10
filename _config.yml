@@ -81,6 +81,21 @@ page-mermaid: false
 
 # Friends
 
+friends: [
+  {
+    title: "虫洞",
+    href: "https://www.foreverblog.cn/go.html"
+  },
+  {
+    title: "十年之约",
+    href: "https://www.foreverblog.cn/"
+  },
+  {
+    title: "<i class=\"fa fa-subway\"></i> 开往",
+    href: "https://travellings.link/"
+  }
+]
+
 #collections
 collections:
   port:
