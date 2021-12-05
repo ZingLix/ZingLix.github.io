@@ -10,18 +10,18 @@
 
 - [cf.mirror.zinglix.xyz](https://cf.mirror.zinglix.xyz)
 - [cf.ljnb.top](https://cf.ljnb.top)
-- [zinglix-github-io.pages.dev](https://zinglix-github-io.pages.dev)
+- [zinglix.pages.dev](https://zinglix.pages.dev)
 
 ## Netlify
 
 - [nf.ljnb.top](https://nf.ljnb.top)
-- [laughing-mahavira-c38582.netlify.app](https://laughing-mahavira-c38582.netlify.app)
+- [zinglix.netlify.app](https://zinglix.netlify.app)
 
 ## Vercel
 
 - [v.mirror.zinglix.xyz](https://v.mirror.zinglix.xyz)
 - [v.ljnb.top](https://v.ljnb.top)
-- [zing-lix-github-io.vercel.app](https://zing-lix-github-io.vercel.app)
+- [zinglix.vercel.app](https://zinglix.vercel.app)
 
 ## GitHub Pages
 
