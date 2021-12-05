@@ -73,12 +73,13 @@ var createSnackbar = (function () {
 var lastNoticeTime = localStorage.getItem('lastNoticeTime');
 var slowNoticeTime = localStorage.getItem('slowNoticeTime');
 var noticeSlow = false;
+var mainUrl = "https://zinglix.xyz";
 
 if (slowNoticeTime == null || Math.floor(Date.now() / 1000) - parseInt(slowNoticeTime) > 60) {
   var slowLoad = window.setTimeout(function () {
     localStorage.setItem('slowNoticeTime', Math.floor(Date.now() / 1000));
     localStorage.setItem('lastNoticeTime', Math.floor(Date.now() / 1000));
-    if (window.location.origin != "{{site.url}}") {
+    if (window.location.origin != mainUrl) {
       createSnackbar({
         message: "您正在访问镜像站点，还是慢？",
         actionText: "查看所有镜像",
@@ -89,7 +90,7 @@ if (slowNoticeTime == null || Math.floor(Date.now() / 1000) - parseInt(slowNotic
       createSnackbar({
         message: "访问过慢？试试镜像站点？",
         actionText: "Go",
-        action: function (e) { window.location = "https://blog.zinglix.xyz{{page.url}}" },
+        action: function (e) { window.location = "https://blog.zinglix.xyz" + window.location.pathname },
         duration: 8000
       });
     }
@@ -102,13 +103,13 @@ if (slowNoticeTime == null || Math.floor(Date.now() / 1000) - parseInt(slowNotic
 }
 
 window.onload = function () {
-  if (!noticeSlow && window.location.origin != "{{site.url}}") {
+  if (!noticeSlow && window.location.origin != mainUrl) {
     if (lastNoticeTime == null || Math.floor(Date.now() / 1000) - parseInt(lastNoticeTime) > 60 * 60) {
       localStorage.setItem('lastNoticeTime', Math.floor(Date.now() / 1000));
       createSnackbar({
-        message: "注意: 您正在访问镜像站点。",
+        message: "注意: 您正在访问镜像站点。前往主站？",
         actionText: "Go",
-        action: function (e) { window.location = "{{site.url}}{{page.url}}" },
+        action: function (e) { window.location = mainUrl + window.location.pathname },
         duration: 3000,
       });
     }
