@@ -293,13 +293,16 @@ function scrollFunction() {
                         message: "您正在访问镜像站点，还是慢？",
                         actionText:"查看所有镜像",
                         action: function(e){window.location = "/mirror"},
+                        duration: 8000
                     });
                 }
             }else{
                 if(lastNoticeTime==null || Math.floor(Date.now() / 1000) - parseInt(lastNoticeTime)>60*60){
                     localStorage.setItem('lastNoticeTime', Math.floor(Date.now() / 1000));
                     createSnackbar({
-                        message: "注意: 您正在访问镜像站点",
+                        message: "注意: 您正在访问镜像站点。返回主站？",
+                        actionText: "Go",
+                        action: function(e){window.location = "{{site.url}}{{page.url}}"},
                         duration: 3000,
                     });
                 }
@@ -313,7 +316,8 @@ function scrollFunction() {
                     createSnackbar({
                         message: "访问过慢？试试镜像站点？",
                         actionText:"Go",
-                        action: function(e){window.location = "https://blog.zinglix.xyz{{page.url}}"}
+                        action: function(e){window.location = "https://blog.zinglix.xyz{{page.url}}"},
+                        duration: 8000
                     });
                 }
             }
