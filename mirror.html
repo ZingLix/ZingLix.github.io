@@ -1,0 +1,12 @@
+---
+layout: page
+title: "Mirrors"
+hide-in-nav: true
+subtitle: "博客镜像列表"
+header-img: "img/post-15.png"
+---
+
+<div class="zh post-container">
+    {% capture mirror %}{% include include/mirror.md %}{% endcapture %} 
+    {{ mirror | markdownify }}
+</div>

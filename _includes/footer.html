@@ -8,7 +8,7 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} 
                     | <a href="/license/">License</a>
-                    | <a href="https://blog.zinglix.xyz{{page.url}}">Mirror</a>
+                    | <a href="https://blog.zinglix.xyz{{page.url}}">Mirror</a>(<a href="/mirror">s</a>)
                     <br>
                     <a href="http://beian.miit.gov.cn">沪ICP备18012603号-1</a>
                     <img src="/img/beian.png" />
@@ -33,6 +33,7 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ " /js/hux-blog.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ " /js/snackbar.js" | prepend: site.baseurl }}"></script>
 <!-- Service Worker -->
 {% if site.service-worker %}
 <script src="{{ " /js/snackbar.js" | prepend: site.baseurl }}"></script>
@@ -278,4 +279,44 @@ function scrollFunction() {
             }
         });
     });
+
+    window.onload = function () {
+        var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+        var lastNoticeTime = localStorage.getItem('lastNoticeTime');
+        var slowNoticeTime = localStorage.getItem('slowNoticeTime');
+
+        if (window.location.origin != "{{site.url}}"){
+            if(loadTime>3000){
+                if(slowNoticeTime==null || Math.floor(Date.now() / 1000) - parseInt(slowNoticeTime)>60){
+                    localStorage.setItem('slowNoticeTime', Math.floor(Date.now() / 1000));
+                    createSnackbar({
+                        message: "您正在访问镜像站点，还是慢？",
+                        actionText:"查看所有镜像",
+                        action: function(e){window.location = "/mirror"},
+                    });
+                }
+            }else{
+                if(lastNoticeTime==null || Math.floor(Date.now() / 1000) - parseInt(lastNoticeTime)>60*60){
+                    localStorage.setItem('lastNoticeTime', Math.floor(Date.now() / 1000));
+                    createSnackbar({
+                        message: "注意: 您正在访问镜像站点",
+                        duration: 3000,
+                    });
+                }
+                
+
+            }
+        }else{
+            if(loadTime>3000){
+                if(slowNoticeTime==null || Math.floor(Date.now() / 1000) - parseInt(slowNoticeTime)>60){
+                    localStorage.setItem('slowNoticeTime', Math.floor(Date.now() / 1000));
+                    createSnackbar({
+                        message: "访问过慢？试试镜像站点？",
+                        actionText:"Go",
+                        action: function(e){window.location = "https://blog.zinglix.xyz{{page.url}}"}
+                    });
+                }
+            }
+        }
+    }
 </script>
