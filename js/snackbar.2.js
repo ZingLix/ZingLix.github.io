@@ -117,13 +117,16 @@ window.onload = function () {
 }
 
 function getFooter() {
+  return_str = ""
   if (window.location.origin.search("zinglix.xyz") != -1) {
-    return ` <a href="http://beian.miit.gov.cn">沪ICP备18012603号-1</a>
+    return_str += `<br><a href="http://beian.miit.gov.cn">沪ICP备18012603号-1</a>
                     <img src="/img/beian.png" />
                     <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002004677">沪公网安备
                         31011002004677 号
                     </a>`
-  } else {
-    return `注意！你正在访问镜像站点！<a href="https://zinglix.xyz${window.location.pathname}">前往主站</a>`
   }
+  if (window.location.origin != "https://zinglix.xyz") {
+    return_str += `<br>注意！你正在访问镜像站点！<a href="https://zinglix.xyz${window.location.pathname}">前往主站</a>`
+  }
+  return return_str;
 }
