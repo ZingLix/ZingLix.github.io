@@ -2,10 +2,10 @@
 layout: default
 ---
 {% if site.page-mathjax %}
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {% endif %}
 {% if site.page-mermaid %}
-<script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js"></script>
+<script src="https://cdn.staticfile.org/mermaid/8.9.0/mermaid.min.js"></script>
 <script>
     const conf = {
         startOnLoad: true,
@@ -113,7 +113,7 @@ layout: default
 </script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("https://cdn.jsdelivr.net/npm/anchor-js@1.2.1/anchor.min.js", function () {
+    async("/js/anchor.min.js", function () {
         anchors.options = {
             visible: 'hover',
             placement: 'right',
@@ -122,7 +122,7 @@ layout: default
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script src="/js/medium-zoom.min.js"></script>
 <script>mediumZoom(document.querySelectorAll('div.post-container img'), { background: 'rgba(1,1,1,0.8)' })</script>
 <style>
     /* place left on bigger screen */
