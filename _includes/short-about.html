@@ -6,7 +6,12 @@
       <img src="{{site.sidebar-avatar}}" />
       {% endif %}
       {% if site.sidebar-about-description %}
-      <p>{{site.sidebar-about-description}}</p>
+        {% for s in site.sidebar-about-description %}
+        <p class="sb_desc">{{s}}</p>
+        {% endfor %}
+        <script>
+          $('.sb_desc').hide().eq(Math.floor(Math.random()*{{ site.sidebar-about-description.size }})).show()
+        </script>
       {% endif %}
       <!-- SNS Link -->
       {% include sns-links.html %}

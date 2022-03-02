@@ -12,7 +12,7 @@ baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 RSS: true
 #weibo_username: 2816853323
 github_username: ZingLix
-zhihu_username:  ZingLix
+zhihu_username: ZingLix
 #github_username:    huxpro
 #twitter_username:  huxpro
 #facebook_username:  huxpro
@@ -60,11 +60,20 @@ kramdown:
 gtag_id: G-D4V3NFFMB0
 ga_track_id: "UA-88177731-1" # Format: UA-xxxxxx-xx
 ga_domain: zinglix.xyz
-google_adsense_id: 
+google_adsense_id:
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "“I have never grown up, but I will never stop growing.”"
+sidebar-about-description:
+  [
+    "“I have never grown up, but I will never stop growing.”",
+    "“Per Aspera Ad Astra”",
+    "山中何事？松花酿酒，春水煎茶。",
+    "循此苦旅，以达天际。",
+    "且将新火试新茶，诗酒趁年华。",
+    "探索世界的好奇心万岁！",
+  ]
+
 sidebar-avatar: /img/avatar.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -81,31 +90,24 @@ page-mermaid: false
 
 # Friends
 
-friends: [
-  {
-    title: "虫洞",
-    href: "https://www.foreverblog.cn/go.html"
-  },
-  {
-    title: "十年之约",
-    href: "https://www.foreverblog.cn/"
-  },
-  {
-    title: "<i class=\"fa fa-subway\"></i> 开往",
-    href: "https://travellings.link/"
-  }
-]
+friends:
+  [
+    { title: "虫洞", href: "https://www.foreverblog.cn/go.html" },
+    { title: "十年之约", href: "https://www.foreverblog.cn/" },
+    {
+      title: '<i class="fa fa-subway"></i> 开往',
+      href: "https://travellings.link/",
+    },
+  ]
 
 #collections
 collections:
   port:
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "offline.html"
     values:
       sitemap: false
 
 port: 4001
-
