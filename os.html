@@ -1,0 +1,40 @@
+---
+layout: default
+hide-in-nav: true
+header-img: "img/os-bg.jpg"
+permalink: /os.html
+hide-cat: true
+---
+
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<div class="container">
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="site-heading" id="tag-heading" style="font-size: 40px;display: block;">
+		<div style="position: relative; margin-top: 35vh;margin-bottom: 35vh; margin-left: auto;margin-right: auto; width: 55%;">
+			
+		  <div style="position: absolute;left: 0; top: 0;">『</div>
+          <div id="sentence" style="font-size: 3.3rem; text-align: center; line-height: 80px; word-break: normal; margin: 0; padding: 15px 50px;">...</div>
+          <div style="position: absolute;right: 0; bottom: 0;">』</div>
+		  
+          <div id="from" style="display: none;font-size: 20px;float: right;margin-top: 40px;color: rgba(255, 255, 255, 0.8);"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</header>
+
+<script>
+	document.body.classList.add('page-fullscreen');
+	fetch('https://onesentence.zinglix.workers.dev/')
+          .then(response =>{return response.json();})
+          .then(data => {
+            $('div#sentence').text(data['sentence']);
+            if(data['from']!=null){
+              $('div#from').show().text("——"+data['from']);
+            }
+          });
+</script>

@@ -8,7 +8,9 @@
 	{% include nav.html %}
     {% include search.html %}
     {{ content }}
+    {% if page.hide-cat != true %}
     {% include pretty-cat.html %}
+    {% endif %}
     {% include back-to-top.html %}
     {% include footer.html %}     
 </body>

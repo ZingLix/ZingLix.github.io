@@ -6,11 +6,15 @@
       <img src="{{site.sidebar-avatar}}" />
       {% endif %}
       {% if site.sidebar-about-description %}
-        {% for s in site.sidebar-about-description %}
-        <p class="sb_desc">{{s}}</p>
-        {% endfor %}
+
+        <p id="sentence" onclick="window.location.href='/os'" title="点击有彩蛋">{{site.sidebar-about-description}}</p>
         <script>
-          $('.sb_desc').hide().eq(Math.floor(Math.random()*{{ site.sidebar-about-description.size }})).show()
+          fetch('https://onesentence.zinglix.workers.dev/')
+          .then(response =>{return response.json();})
+          .then(data => {
+            $('p#sentence').text(data['sentence']);
+          });
+         
         </script>
       {% endif %}
       <!-- SNS Link -->

@@ -64,15 +64,8 @@ google_adsense_id:
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description:
-  [
-    "“I have never grown up, but I will never stop growing.”",
-    "“Per Aspera Ad Astra”",
-    "山中何事？松花酿酒，春水煎茶。",
-    "循此苦旅，以达天际。",
-    "且将新火试新茶，诗酒趁年华。",
-    "探索世界的好奇心万岁！",
-  ]
+sidebar-about-description: "探索世界的好奇心万岁！"
+
 
 sidebar-avatar: /img/avatar.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
