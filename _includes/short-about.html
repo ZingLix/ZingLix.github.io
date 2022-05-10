@@ -7,9 +7,9 @@
       {% endif %}
       {% if site.sidebar-about-description %}
 
-        <p id="sentence" onclick="window.location.href='/os'" title="点击有彩蛋">{{site.sidebar-about-description}}</p>
+        <p id="sentence" onclick="window.location.href='/onesentence'" title="点击有彩蛋">{{site.sidebar-about-description}}</p>
         <script>
-          fetch('https://onesentence.zinglix.workers.dev/')
+          fetch('https://zinglix.xyz/api/onesentence/')
           .then(response =>{return response.json();})
           .then(data => {
             $('p#sentence').text(data['sentence']);
