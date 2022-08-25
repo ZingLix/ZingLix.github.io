@@ -30,7 +30,7 @@ hide-cat: true
 <script>
 	document.body.classList.add('page-fullscreen');
   function update(){
-	fetch('https://zinglix.xyz/api/onesentence/')
+	fetch('https://api.ljnb.top/')
           .then(response =>{return response.json();})
           .then(data => {
             $('div#sentence').text(data['sentence']);

@@ -9,7 +9,7 @@
 
         <p id="sentence" onclick="window.location.href='/onesentence'" title="点击有彩蛋">{{site.sidebar-about-description}}</p>
         <script>
-          fetch('https://zinglix.xyz/api/onesentence/')
+          fetch('https://api.ljnb.top/')
           .then(response =>{return response.json();})
           .then(data => {
             $('p#sentence').text(data['sentence']);

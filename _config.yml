@@ -2,7 +2,7 @@
 title: ZingLix Blog
 SEOTitle: ZingLix Blog
 header-img: img/home-bg.jpg
-email: me@zinglix.xyz
+email: 9cf1f9dce6f5f2fbf0f5e4b2e4e5e6
 description: "这里是 ZingLix 的个人博客，与你一起在计算机的世界探索~"
 keyword: "ZingLix"
 url: "https://zinglix.xyz" # your host, for absolute URL
@@ -39,7 +39,8 @@ webmaster_verifications:
   google: fgb5ErG0v88HE1O1cnghOjnrgBtHepdy4iPOJ1x8WdI
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-plugins: [jekyll-paginate, jekyll-sitemap, jemoji, jekyll-seo-tag]
+plugins:
+  [jekyll-paginate, jekyll-sitemap, jemoji, jekyll-seo-tag, jekyll-minifier]
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -66,7 +67,6 @@ google_adsense_id:
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "探索世界的好奇心万岁！"
 
-
 sidebar-avatar: /img/avatar.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -92,6 +92,13 @@ friends:
       href: "https://travellings.link/",
     },
   ]
+
+jekyll-minifier:
+  exclude: ["*.js", "*.xml"]
+  compress_css: false # Default: true
+  compress_javascript: false # Default: true
+  uglifier_args:
+    harmony: true
 
 #collections
 collections:
