@@ -8,6 +8,8 @@ jobs:
       - name: Checkout	
         uses: actions/checkout@v2	
       - name: Build	
+        env:
+          JEKYLL_ENV: production
         run: |	
           sudo apt install ruby-full build-essential zlib1g-dev	
           sudo gem install jekyll bundler	
