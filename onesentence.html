@@ -36,6 +36,8 @@ hide-cat: true
             $('div#sentence').text(data['sentence']);
             if(data['from']!=null){
               $('div#from').show().text("——"+data['from']);
+            }else{
+              $('div#from').hide();
             }
           });
         }
