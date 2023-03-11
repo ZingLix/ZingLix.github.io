@@ -39,3 +39,4 @@ jobs:
           local_path: _site
           remote_path: /
           clean: true
+          accelerate: true
