@@ -31,7 +31,7 @@ jobs:
 #           staticSrcPath: _site 
       - name: Tencent Cloud COS Action
 #        uses: TencentCloud/cos-action@v1
-        uses: ZingLix/cos-action@v1-fix
+        uses: ZingLix/cos-action@V1-fix
         with:
           secret_id: ${{ secrets.SECRET_ID }}
           secret_key: ${{ secrets.SECRET_KEY }}
