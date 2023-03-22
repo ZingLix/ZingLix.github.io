@@ -30,7 +30,8 @@ jobs:
 #           # Github 项目静态文件的路径	
 #           staticSrcPath: _site 
       - name: Tencent Cloud COS Action
-        uses: TencentCloud/cos-action@v1
+#        uses: TencentCloud/cos-action@v1
+        uses: ZingLix/cos-action@v1-fix
         with:
           secret_id: ${{ secrets.SECRET_ID }}
           secret_key: ${{ secrets.SECRET_KEY }}
