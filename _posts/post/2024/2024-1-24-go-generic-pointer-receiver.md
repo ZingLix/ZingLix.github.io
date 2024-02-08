@@ -133,7 +133,13 @@ func Create[T any, Ptr PersonPtr[T]](id int) *T {
 stu := Create[Student, *Student](1)
 ```
 
-通过这个 trick，虽然很丑，但我们终于实现了 Go 中的泛型与 pointer receiver 的共存...
+这样调用真的很丑，但好在 Go 这回终于做了个人，通过类型的自动推导可以自动推导出第二个参数，所以调用时可以简化为
+
+```go
+stu := Create[Student](1)
+```
+
+这样调用看起来就和谐了许多（虽然背后的实现需要用些难懂的 trick，但我们至少终于实现了 Go 中的泛型与 pointer receiver 的共存...
 
 ## 总结
 
