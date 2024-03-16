@@ -1,23 +1,24 @@
 <section class="visible-md visible-lg">
-    <hr>
-    <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
-    <div class="short-about">
-      {% if site.sidebar-avatar %}
-      <img src="{{site.sidebar-avatar}}" />
-      {% endif %}
-      {% if site.sidebar-about-description %}
+  <hr>
+  <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
+  <div class="short-about">
+    {% if site.sidebar-avatar %}
+    <img src="{{site.sidebar-avatar}}" />
+    {% endif %}
+    {% if site.sidebar-about-description %}
 
-        <p id="sentence" onclick="window.location.href='/onesentence'" title="点击有彩蛋">{{site.sidebar-about-description}}</p>
-        <script>
-          fetch('https://api.ljnb.top/')
-          .then(response =>{return response.json();})
-          .then(data => {
-            $('p#sentence').text(data['sentence']);
-          });
-         
-        </script>
-      {% endif %}
-      <!-- SNS Link -->
-      {% include sns-links.html %}
-    </div>
-  </section> 
+    <p id="sentence" onclick="window.location.href='/onesentence'" title="点击有彩蛋">{{site.sidebar-about-description}}</p>
+    <script>
+      let r = Math.floor(Math.random() * 12);
+      fetch(`/api/onesentence/${r}.json`)
+        .then(response => { return response.json(); })
+        .then(data => {
+          $('p#sentence').text(data['sentence']);
+        });
+
+    </script>
+    {% endif %}
+    <!-- SNS Link -->
+    {% include sns-links.html %}
+  </div>
+</section>
