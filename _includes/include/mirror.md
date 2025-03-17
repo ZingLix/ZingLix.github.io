@@ -8,21 +8,20 @@
 
 ## Cloudflare
 
-- [cf.mirror.zinglix.xyz](https://cf.mirror.zinglix.xyz)
-- [cf.ljnb.top](https://cf.ljnb.top)
 - [zinglix.pages.dev](https://zinglix.pages.dev)
+- [cf.mirror.zinglix.xyz](https://cf.mirror.zinglix.xyz)
 
 ## Netlify
 
-- [nf.ljnb.top](https://nf.ljnb.top)
 - [zinglix.netlify.app](https://zinglix.netlify.app)
+- [nf.mirror.zinglix.xyz](https://nf.mirror.zinglix.xyz)
 
 ## Vercel
 
-- [v.mirror.zinglix.xyz](https://v.mirror.zinglix.xyz)
-- [v.ljnb.top](https://v.ljnb.top)
 - [zinglix.vercel.app](https://zinglix.vercel.app)
+- [v.mirror.zinglix.xyz](https://v.mirror.zinglix.xyz)
 
 ## GitHub Pages
 
+- [zinglix.github.io](https://zinglix.github.io)
 - [gh.mirror.zinglix.xyz](https://gh.mirror.zinglix.xyz)
